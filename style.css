@@ -1,0 +1,284 @@
+/* Menu */
+
+@font-face {
+    font-family: 'Etherea';
+    src: url('typo/cirkus/Cirkus.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#fond-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* remplit l'écran */
+    z-index: -1; /* reste derrière tout */
+}
+
+.menu{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 180, 251, 0.205);
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    /* background-image: url(decor/décors-prairie.png); */
+    z-index: 1;
+    position: relative;
+}
+
+.logo-menu{
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 50px;
+    transition: all 1s;
+
+}
+
+.logo-menu img{
+    width: 100%;
+}
+
+.content-menu{
+    margin-top: 25px;
+    font-family: 'Etherea';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.bouton-menu {
+    animation: flotter 3s ease-in-out infinite;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 40%;
+    height: 125px;
+    margin-top: 10px;
+    transition: all 1s;
+    cursor: pointer;
+    /* background-color: blueviolet; */
+}
+
+.bouton-menu h1{
+    font-weight: lighter;
+    font-size: 90px;
+    cursor: pointer;
+     transition: all 1s;
+}
+.bouton-menu:hover{
+    margin-bottom: 25px;
+}
+.bouton-menu:hover h1{
+    font-size: 100px;
+}
+
+
+
+
+@keyframes flotter {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#play{ 
+    animation-delay: 0s;
+    background-image: url(bouton-menu/play.png);
+}
+#level{ 
+    animation-delay: 0.2s; 
+    background-image: url(bouton-menu/level.png);
+}
+#settings{ 
+    animation-delay: 0.4s; 
+    background-image: url(bouton-menu/settings.png);
+}
+#quit{ 
+    animation-delay: 0.6s; 
+    background-image: url(bouton-menu/quit.png);
+}
+
+/* Responsive Menu */
+
+@media screen and (max-width:1500px) {
+    .menu{
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo-menu{
+        margin: 0;
+    }
+
+
+    .bouton-menu h1{
+        font-size: 80px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 90px;
+    }
+}
+@media screen and (max-width:1250px) {
+    .bouton-menu{
+        width: 50%;
+    }
+    .bouton-menu h1{
+        font-size: 70px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width:1000px) {
+
+    .logo-menu{
+        width: 90%;
+    }
+    .bouton-menu{
+        width: 60%;
+        height: 110px;
+    }
+    .bouton-menu h1{
+        font-size: 70px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width:800px) {
+
+    .bouton-menu{
+        width: 75%;
+    }
+    .bouton-menu h1{
+        font-size: 60px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width:620px) {
+
+    .bouton-menu{
+        height: 90px;
+    }
+}
+@media screen and (max-width:500px) {
+   
+    .bouton-menu{
+        width: 80%;
+        height: 75px;
+    }
+    .bouton-menu h1{
+        font-size: 50px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 55px;
+    }
+}
+@media screen and (max-width:420px) {
+
+
+    .bouton-menu{
+        height: 65px;
+    }
+    .bouton-menu h1{
+        font-size: 40px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width:340px) {
+
+    .bouton-menu{
+        height: 50px;
+    }
+    .bouton-menu h1{
+        font-size: 30px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:240px) {
+
+    .bouton-menu{
+        height: 40px;
+    }
+    .bouton-menu h1{
+        font-size: 25px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:180px) {
+
+    .bouton-menu{
+        height: 25px;
+    }
+    .bouton-menu h1{
+        font-size: 20px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:110px) {
+
+    .bouton-menu{
+        height: 20px;
+    }
+    .bouton-menu h1{
+        font-size: 14px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:70px) {
+    .content-menu{
+        margin-top: 0px;
+    }
+
+    .bouton-menu{
+        height: 20px;
+    }
+    .bouton-menu h1{
+        font-size: 12px;
+    }
+
+    .bouton-menu:hover h1{
+        font-size: 14px;
+    }
+}
+
+
