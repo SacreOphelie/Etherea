@@ -45,7 +45,6 @@
 }
 
 .content-menu{
-    margin-top: 25px;
     font-family: 'Etherea';
     width: 100%;
     display: flex;
@@ -67,7 +66,7 @@
     background-position: center center;
     width: 40%;
     height: 125px;
-    margin-top: 10px;
+    margin-top: 25px;
     transition: all 1s;
     cursor: pointer;
     /* background-color: blueviolet; */
@@ -125,8 +124,12 @@
     
     .logo-menu{
         margin: 0;
+        width: 75%;
     }
 
+    .bouton-menu{
+        margin-top: 10px;
+    }
 
     .bouton-menu h1{
         font-size: 80px;
@@ -185,9 +188,13 @@
     }
 }
 @media screen and (max-width:500px) {
+
+    .logo-menu{
+        width: 95%;
+    }
    
     .bouton-menu{
-        width: 80%;
+        width: 90%;
         height: 75px;
     }
     .bouton-menu h1{
@@ -265,9 +272,6 @@
     }
 }
 @media screen and (max-width:70px) {
-    .content-menu{
-        margin-top: 0px;
-    }
 
     .bouton-menu{
         height: 20px;
@@ -280,7 +284,5 @@
         font-size: 14px;
     }
 }
-
-/* il faudrait + élargir pour les téléphones c'est un peu petit  */
 
 
