@@ -5,9 +5,39 @@
     src: url('typo/cirkus/Cirkus.ttf') format('truetype');
 }
 
+@font-face{
+    font-family: 'Roboto';
+    src: url(typo/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
+}
+
+html,body{
+    cursor: none;
+    scroll-behavior: smooth;
+}
+
+a{
+    cursor: none;
+}
+
+p{
+    font-family: 'Roboto';
+}
+
+#move{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-image: url(cursor/cursor_artefact.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    z-index: 100;
 }
 
 #fond-menu{
@@ -16,8 +46,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* remplit l'écran */
-    z-index: -1; /* reste derrière tout */
+    object-fit: cover;
+    z-index: -1; 
 }
 
 .menu{
@@ -51,7 +81,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 1s;
 }
 
 .bouton-menu {
@@ -67,16 +96,18 @@
     width: 40%;
     height: 125px;
     margin-top: 25px;
-    transition: all 1s;
-    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     /* background-color: blueviolet; */
 }
+
+
 
 .bouton-menu h1{
     font-weight: lighter;
     font-size: 90px;
-    cursor: pointer;
-     transition: all 1s;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .bouton-menu:hover{
     margin-bottom: 25px;
@@ -112,6 +143,22 @@
 #quit{ 
     animation-delay: 0.6s; 
     background-image: url(bouton-menu/quit.png);
+}
+
+.footer-menu{
+    margin-top: 100px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: white;
+    flex-direction: column;
+}
+
+#signature{
+    margin-top: 10px;
 }
 
 /* Responsive Menu */
@@ -204,6 +251,11 @@
     .bouton-menu:hover h1{
         font-size: 55px;
     }
+    .footer-menu{
+        width: 90%;
+        text-align: center;
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:420px) {
 
@@ -218,6 +270,9 @@
     .bouton-menu:hover h1{
         font-size: 45px;
     }
+    .footer-menu{
+        font-size: 12px;
+    }
 }
 @media screen and (max-width:340px) {
 
@@ -231,6 +286,7 @@
     .bouton-menu:hover h1{
         font-size: 35px;
     }
+
 }
 @media screen and (max-width:240px) {
 
@@ -244,6 +300,7 @@
     .bouton-menu:hover h1{
         font-size: 30px;
     }
+
 }
 @media screen and (max-width:180px) {
 
@@ -270,6 +327,9 @@
     .bouton-menu:hover h1{
         font-size: 16px;
     }
+      .footer-menu{
+        font-size: 9px;
+    }
 }
 @media screen and (max-width:70px) {
 
@@ -283,6 +343,168 @@
     .bouton-menu:hover h1{
         font-size: 14px;
     }
+  
 }
 
+/* Header */
 
+header{
+    background-image: url(header/header.png);
+    background-size: contain;
+    background-position: top right;
+    width: 100%;
+    height: 175px;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 100px;
+    margin: 25px;
+}
+
+#logo img{
+    width: 100%;
+}
+
+nav{
+    width: 50%;
+    height: 125px;
+    /* background-color: aliceblue; */
+    margin-right: 40px;
+}
+nav ul{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    /* background-color: antiquewhite; */
+    width: 100%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Etherea';
+    font-size: 45px;
+    display: inline block;
+    display: inline-block;
+    -webkit-transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+nav ul li{
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#download{
+    background-image: url(bouton-menu/download.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease; 
+    /* ease → la courbe d’accélération : ça démarre doucement, accélère au milieu et ralentit à la fin. */
+}
+
+#download:hover{
+    transform: scale(1.2);
+}
+
+nav ul li:hover a:not(#download a)  {
+  color: #62438f;
+  transform: scale(1.1);
+}
+
+/* Home */
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+     overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#decor-foret{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0; 
+}
+
+.cattie{
+    width: 125px;
+    position: absolute; 
+    bottom: 515px;     
+    left: 100px;          
+    transform: scaleX(1); /* face à droite par défaut */
+    transition: transform 0.25s ease;
+}
+
+ .cattie video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+#cattie_idl{
+    opacity: 1;
+}
+#cattie_run{
+    opacity: 0;
+}
+
+.container-arrow{
+    background-color: #61438f00;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    bottom: 10%;
+    right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.arrow{
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-arrow #right{
+    background-image: url(arrow/right.png);
+}
+.container-arrow #left{
+    background-image: url(arrow/left.png);
+}
+.container-arrow #down{
+    background-image: url(arrow/down.png);
+}
+.container-arrow #up{
+    background-image: url(arrow/up.png);
+}
+
+.right-active{
+    background-image: url(arrow/right_down.png) !important;
+    width: 95%;
+}
