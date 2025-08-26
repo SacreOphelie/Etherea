@@ -18,6 +18,7 @@
 html,body{
     cursor: none;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 a{
@@ -426,33 +427,32 @@ nav ul li:hover a:not(#download a)  {
   transform: scale(1.1);
 }
 
-/* Home */
+/* slides */
 
-.home{
-    width: 100%;
-    min-height: 100vh;
-     overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+.slides{
+    display: flex;
+    width: 400vw; /* 4 slides horizontaux, tu multiplies au besoin */
+    height: 100vh; /* attention pas de débordement */
+    transition: transform 0.5s ease;
 }
 
-#decor-foret{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: 0; 
+.slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cattie{
     width: 125px;
     position: absolute; 
     bottom: 515px;     
-    left: 100px;          
-    transform: scaleX(1); /* face à droite par défaut */
+    left: 150px;          
+    transform: scaleX(1); 
     transition: transform 0.25s ease;
+    z-index: 5;
 }
 
  .cattie video {
@@ -475,9 +475,9 @@ nav ul li:hover a:not(#download a)  {
     width: 300px;
     height: 200px;
     z-index: 1;
-    position: absolute;
-    bottom: 10%;
-    right: 100px;
+    position: fixed;
+    bottom: 5%;
+    left: 100px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
@@ -508,3 +508,32 @@ nav ul li:hover a:not(#download a)  {
     background-image: url(arrow/right_down.png) !important;
     width: 95%;
 }
+
+.left-active{
+    background-image: url(arrow/left_down.png) !important;
+    width: 95%;
+}
+
+.direction{
+    background-color: #62438f;
+    width: 50px;
+    height: 100px;
+     z-index: 1;
+    position: fixed;
+    bottom: 45%;
+    right: 75px;
+    animation: move 1s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(25px);
+    }
+}
+
+/* Home */
+
+/* About */
