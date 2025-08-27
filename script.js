@@ -25,20 +25,20 @@
         const cattie_idl = document.getElementById("cattie_idl");
         const cattie_run = document.getElementById("cattie_run");
         const cattie = document.querySelector(".cattie")
-        const speed = 2.5; // sa vitesse
         let movingLeft = false; // lorsque il va bouger vers la gauche 
         let movingRight = false; // bouger vers la droite
-
+        
         // Arrow
         const arrow_right = document.getElementById("right")
         const arrow_left = document.getElementById("left")
-
+        
         // Slides
         const slides = document.querySelector(".slides")
         let slideIndex = 0 
         const slideWidth = window.innerWidth
         let cattieX = 0
-
+        const speed = 5; // sa vitesse
+        
 
         function showIdle() {
             cattie_idl.style.opacity = 1;
