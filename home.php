@@ -29,14 +29,14 @@
     </div>
     <div class="direction"></div>
     <div class="slides">
-        <div class="slide" id="home">
+        <!-- <div class="slide" id="home">
             <video autoplay muted loop>
-                <source src="decor/Decor_foret_etherea_slide1.mp4" type="video/mp4">
+                <source src="decor/Decor_foret_etherea_home.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="slide" id="about">
+        </div> -->
+        <!-- <div class="slide" id="about">
             <video autoplay muted loop>
-                <source src="decor/Decor_foret_etherea_slide2.mp4" type="video/mp4">
+                <source src="decor/Decor_foret_etherea_about.mp4" type="video/mp4">
             </video>
             <div class="content-about">
                 <h1>Welcome to Etherea !</h1>
@@ -46,20 +46,35 @@
 
                 <p>If you want to discover more, head to the left: there you’ll find <strong>the characters and the different worlds of Etherea.</strong> Already convinced? <strong>Just click the Download button !</strong></p>
             </div>
-        </div>
+        </div> -->
         <div class="slide" id="character">
             <video autoplay muted loop>
-                <source src="decor/Decor_foret_etherea_slide2.mp4" type="video/mp4">
+                <source src="decor/Decor_foret_etherea_character.mp4" type="video/mp4">
             </video>
+            <div class="content-character">
+                <div class="card-character">
+                    <div class="character-img" id="card-cattie"></div>
+                    <div class="character-texte"></div>
+                    <p>Click me !</p>
+                </div>
+                <div class="card-character">
+                    <div class="character-img"></div>
+                    <div class="character-texte"></div>
+                </div>
+                <div class="card-character">
+                    <div class="character-img"></div>
+                    <div class="character-texte"></div>
+                </div>
+            </div>
         </div>
         <div class="slide" id="worlds">
             <video autoplay muted loop>
-                <source src="decor/Decor_foret_etherea_slide2.mp4" type="video/mp4">
+                <source src="decor/Decor_foret_etherea_worlds.mp4" type="video/mp4">
             </video>
         </div>
         <div class="slide" id="download-slide">
             <video autoplay muted loop>
-                <source src="decor/Decor_foret_etherea_slide2.mp4" type="video/mp4">
+                <source src="decor/Decor_foret_etherea_download.mp4" type="video/mp4">
             </video>
         </div>
     </div>

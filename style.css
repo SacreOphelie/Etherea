@@ -278,8 +278,14 @@ nav ul li:hover a:not(#download a)  {
     font-family: 'Etherea';
     color:#62438f;
     font-weight: normal;
-    font-size: 50px;
-    margin-bottom: 40px;
+    font-size: 75px;
+    margin-bottom: 25px;
+    margin-top: -70px;
+    text-shadow: 
+    -1px -1px 0 rgb(255, 255, 255),
+     1px -1px 0 rgb(255, 255, 255),
+    -1px  1px 0 rgb(255, 255, 255),
+     1px  1px 0 rgb(255, 255, 255);
 }
 
 .content-about p{
@@ -289,4 +295,48 @@ nav ul li:hover a:not(#download a)  {
 
 .content-about p strong{
     color: #62438f;
+}
+
+/* Character */
+
+.content-character{
+    position: relative;
+    width: 45%;
+    z-index: 1;
+    height: 30%;
+    overflow: hidden;
+    margin-top: -175px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-character{
+    border: solid 2px white;
+    width: 250px;
+    height: 100%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.character-img{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#card-cattie{
+    background-image: url(perso/CatTie.png) ;
+
+}
+
+.character-texte{
+    transition: all 0.5s ease;
+}
+
+.card-character:hover .character-texte {
+  top: 0%;         /* apparaît au hover */
 }

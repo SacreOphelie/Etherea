@@ -5,8 +5,8 @@
                 <li><a href="home.php#home">Home</a></li>
                 <li><a href="home.php#about">About</a></li>
                 <li><a href="home.php#character">Characters</a></li>
-                <li><a href="home.php#level">Worlds</a></li>
-                <li id="download"><a href="">Download</a></li>
+                <li><a href="home.php#worlds">Worlds</a></li>
+                <li id="download"><a href="home.php#download-slide">Download</a></li>
             </ul>
         </nav>
 </header>
