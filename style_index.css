@@ -32,7 +32,7 @@ p{
     height: 50px;
     width: 50px;
     border-radius: 10px;
-    background-image: url(cursor/cursor_artefact.png);
+    background-image: url(illu/cursor/cursor_artefact.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -130,19 +130,19 @@ p{
 
 #play{ 
     animation-delay: 0s;
-    background-image: url(bouton-menu/play.png);
+    background-image: url(illu/bouton-menu/play.png);
 }
 #level{ 
     animation-delay: 0.2s; 
-    background-image: url(bouton-menu/level.png);
+    background-image: url(illu/bouton-menu/level.png);
 }
 #settings{ 
     animation-delay: 0.4s; 
-    background-image: url(bouton-menu/settings.png);
+    background-image: url(illu/bouton-menu/settings.png);
 }
 #quit{ 
     animation-delay: 0.6s; 
-    background-image: url(bouton-menu/quit.png);
+    background-image: url(illu/bouton-menu/quit.png);
 }
 
 .footer-menu{

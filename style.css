@@ -33,7 +33,7 @@ p{
     height: 50px;
     width: 50px;
     border-radius: 10px;
-    background-image: url(cursor/cursor_artefact.png);
+    background-image: url(illu/cursor/cursor_artefact.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -52,91 +52,38 @@ p{
 }
 
 
-/* Header */
+/* Header  */
 
 header{
-    background-image: url(header/header.png);
-    background-size: contain;
-    background-position: top right;
-    width: 100%;
-    height: 175px;
-    z-index: 5;
     position: fixed;
-    top: 0;
-    right: 0;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    /* background-color: #62438f; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 }
-
-#logo{
-    width: 100px;
-    margin: 25px;
+.echap{
+    margin-left: 20px;
+    width: 75px;
+    height: 75px;
 }
-
-#logo img{
+.echap img{
     width: 100%;
 }
 
-nav{
-    width: 50%;
-    height: 125px;
-    /* background-color: aliceblue; */
-    margin-right: 40px;
-}
-nav ul{
-    display: flex;
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    /* background-color: antiquewhite; */
-    width: 100%;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Etherea';
-    font-size: 45px;
-    display: inline block;
-    display: inline-block;
-    -webkit-transition: transform 0.2s ease, color 0.2s ease;
-    transition: transform 0.2s ease;
-}
-
-nav ul li{
-    /* background-color: blueviolet; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-#download{
-    background-image: url(bouton-menu/download.png);
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: transform 0.5s ease;
-    transition: transform 0.5s ease; 
-    /* ease → la courbe d’accélération : ça démarre doucement, accélère au milieu et ralentit à la fin. */
-}
-
-#download:hover{
-    transform: scale(1.2);
-}
-
-nav ul li:hover a:not(#download a)  {
-  color: #62438f;
-  transform: scale(1.1);
+.menu{
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
 }
 
 /* slides */
 
 .slides{
     display: flex;
-    width: 500vw; /* 4 slides horizontaux, tu multiplies au besoin */
+    width: 500vw;
     height: 100vh; /* attention pas de débordement */
     transition: transform 0.5s ease;
 }
@@ -151,20 +98,20 @@ nav ul li:hover a:not(#download a)  {
     justify-content: center;
 }
 
-.slide video{
+.fond{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* pour remplir sans déformation */
-    z-index: -1; /* passe derrière le contenu */
+    object-fit: cover;
+    z-index: -1;
 }
 
 .cattie{
-    width: 125px;
+    width: 7%;
     position: absolute; 
-    bottom: 515px;     
+    bottom: 450px;     
     left: 150px;          
     transform: scaleX(1); 
     transition: transform 0.25s ease;
@@ -208,41 +155,78 @@ nav ul li:hover a:not(#download a)  {
 }
 
 .container-arrow #right{
-    background-image: url(arrow/right.png);
+    background-image: url(illu/arrow/right.png);
 }
 .container-arrow #left{
-    background-image: url(arrow/left.png);
+    background-image: url(illu/arrow/left.png);
 }
 .container-arrow #down{
-    background-image: url(arrow/down.png);
+    background-image: url(illu/arrow/down.png);
 }
 .container-arrow #up{
-    background-image: url(arrow/up.png);
+    background-image: url(illu/arrow/up.png);
 }
 
 .right-active{
-    background-image: url(arrow/right_down.png) !important;
+    background-image: url(illu/arrow/right_down.png) !important;
     width: 95%;
 }
 
 .left-active{
-    background-image: url(arrow/left_down.png) !important;
+    background-image: url(illu/arrow/left_down.png) !important;
     width: 95%;
 }
-
 .direction{
-    /* background-color: #62438f; */
-    background-image: url(arrow/direction.png);
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 75px;
-     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    width: 125px;
+    height: 150px;
+    z-index: 1;
     position: fixed;
     bottom: 45%;
     right: 75px;
     animation: move 1s ease-in-out infinite alternate;
+}
+
+.direction_right{
+    bottom: 45%;
+    right: 75px;
+}
+.direction_left{
+    bottom: 45%;
+    left: 50px;
+}
+
+.direction_texte_right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+.direction_texte_left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.direction_text{
+    /* background-color: #62438f; */
+    font-size: 45px;
+    font-family: 'Etherea';
+    color: white;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.direction img{
+    width: 50px;
 }
 
 @keyframes move {
@@ -256,6 +240,8 @@ nav ul li:hover a:not(#download a)  {
 
 
 
+
+
 /* Home */
 
 /* About */
@@ -266,7 +252,7 @@ nav ul li:hover a:not(#download a)  {
     z-index: 1;
     font-family: 'Roboto';
     width: 40%;
-    margin-top: -225px;
+    margin-top: -150px;
     padding: 25px;
     border-radius: 25px;
     backdrop-filter: blur(5px);
@@ -275,12 +261,13 @@ nav ul li:hover a:not(#download a)  {
 }
 
 .content-about h1{
+    text-align: center;
     font-family: 'Etherea';
     color:#62438f;
     font-weight: normal;
-    font-size: 75px;
+    font-size: 100px;
     margin-bottom: 25px;
-    margin-top: -70px;
+    margin-top: -90px;
     text-shadow: 
     -1px -1px 0 rgb(255, 255, 255),
      1px -1px 0 rgb(255, 255, 255),
@@ -291,6 +278,7 @@ nav ul li:hover a:not(#download a)  {
 .content-about p{
     margin-top: 15px;
     margin-left: 25px;
+    font-size: 18px;
 }
 
 .content-about p strong{
@@ -300,43 +288,68 @@ nav ul li:hover a:not(#download a)  {
 /* Character */
 
 .content-character{
-    position: relative;
-    width: 45%;
+    width: 55%;
     z-index: 1;
-    height: 30%;
-    overflow: hidden;
-    margin-top: -175px;
-    padding: 25px;
+    height: 35%;
+    margin-top: -200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .card-character{
-    border: solid 2px white;
-    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 280px;
     height: 100%;
-    position: relative;
     border-radius: 25px;
     overflow: hidden;
-}
-
-.character-img{
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    transition: all 0.2s ease-in-out;
 }
 
 #card-cattie{
-    background-image: url(perso/CatTie.png) ;
-
+    background-color:#d4a2a3;
 }
 
-.character-texte{
-    transition: all 0.5s ease;
+#card-lys{
+    background-color: #e6e6fe;
+}
+
+#card-lavende{
+    background-color: #b49ad5;
+}
+
+.character-img{
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-img video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 5;
+}
+
+.character-texte {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2.5px);
 }
 
 .card-character:hover .character-texte {
-  top: 0%;         /* apparaît au hover */
+    top: 0%;
 }
