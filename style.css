@@ -294,7 +294,8 @@ header{
 }
 
 .content-about p strong{
-    color: #ffc6eb;
+    color: #ffffff;
+    text-shadow: #f2b3ff 0px 0px 10px;
 }
 
 /* Character */
