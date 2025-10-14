@@ -10,13 +10,25 @@
 
 <body>
     <div id="move"></div>
-    <?php include("<partials/header.php") ?>
+    <?php include("partials/header.php") ?>
     <div class="cattie">
         <video id="cattie_idl" autoplay muted loop>
             <source src="perso/CatTie_idl.webm" type="video/webm">
         </video>
         <video id="cattie_run" autoplay muted loop>
             <source src="perso/CatTie_run.webm" type="video/webm">
+        </video>
+        <video id="lys_idl" autoplay muted loop>
+            <source src="perso/Lys_idl.webm" type="video/webm">
+        </video>
+        <video id="lys_run" autoplay muted loop>
+            <source src="perso/Lys_run.webm" type="video/webm">
+        </video>
+        <video id="lavende_idl" autoplay muted loop>
+            <source src="perso/Lavende_idl.webm" type="video/webm">
+        </video>
+        <video id="lavende_run" autoplay muted loop>
+            <source src="perso/Lavende_run.webm" type="video/webm">
         </video>
     </div>
     <div class="container-arrow">
@@ -36,13 +48,13 @@
         <div class="direction_texte_left"></div>
     </div>
     <div class="slides">
-        <!-- <?php include("<pages/home.php") ?> -->
-        <!-- <?php include("<pages/about.php") ?>    -->
-        <?php include("<pages/character.php") ?>   
-        <?php include("<pages/worlds.php") ?>   
-        <?php include("<pages/download.php") ?>         
+        <?php include("pages/home.php") ?>
+        <?php include("pages/about.php") ?>   
+        <?php include("pages/character.php") ?>   
+        <?php include("pages/worlds.php") ?>   
+        <?php include("pages/download.php") ?>         
     </div>
-    <?php include("<partials/footer.php") ?>
+    <?php include("partials/footer.php") ?>
 
     <script src="script.js"></script>
 </body>
