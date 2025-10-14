@@ -257,10 +257,6 @@ header{
     }
 }
 
-
-
-
-
 /* Home */
 
 /* About */
@@ -345,7 +341,6 @@ header{
 
 }
 
-
 .character-img{
     width: 90%;
     height: 90%;
@@ -380,3 +375,40 @@ header{
     top: 0%;
 }
 
+/* Worlds */
+
+.container_worlds{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: -200px;
+}
+
+.worlds_choice{
+    width: 450px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+#foret{
+    background-image: url(illu/cadre/cadre_foret.png);
+    animation: flotter 2s ease-in infinite;
+}
+
+#prairie{
+    background-image: url(illu/cadre/cadre_prairie.png);
+    animation: flotter 2s ease-out infinite;
+}
+
+#desert{
+    background-image: url(illu/cadre/cadre_desert.png);
+    animation: flotter 2s ease-out infinite;
+}
+
+#jungle{
+    background-image: url(illu/cadre/cadre_jungle.png);
+    animation: flotter 2s ease-in-out infinite;
+}

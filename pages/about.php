@@ -1,5 +1,5 @@
 <div class="slide" id="about">
-    <video autoplay muted loop class="fond">
+    <video autoplay muted loop class="fond" id="video_about">
         <source src="decor/about.webm" type="video/mp4">
     </video>
     <div class="content-about">
