@@ -110,9 +110,18 @@ showCharacter(cattie_idl, cattie_run);
 
 // sauvegarder le choix du perso
 const savedCharacter = localStorage.getItem("character");
-if (savedCharacter === "lys") showCharacter(lys_idl, lys_run);
-else if (savedCharacter === "lavende") showCharacter(lavende_idl, lavende_run);
-else if (savedCharacter === "cattie") showCharacter(cattie_idl, cattie_run);
+if(savedCharacter === "lys")
+{
+    showCharacter(lys_idl, lys_run);
+
+}else if(savedCharacter === "lavende") 
+{
+    showCharacter(lavende_idl, lavende_run);
+
+}else if(savedCharacter === "cattie")
+{
+    showCharacter(cattie_idl, cattie_run);
+}
 
 // ---- Gestion des directions slides ----
 const slidesNames = ["Home", "About", "Character", "Worlds", "Download"];
@@ -253,3 +262,32 @@ jungle.addEventListener("click", () => {
     console.log("Jungle cliqué !");
     localStorage.setItem("world", "jungle");
 });
+
+// sauvegarde du choix des mondes 
+const savedWorld = localStorage.getItem("world");
+
+if (savedWorld === "prairie") {
+    video_home.src = "decor/prairie/prairie_home.webm";
+    video_about.src = "decor/prairie/prairie_about.webm";
+    video_character.src = "decor/prairie/prairie_character.webm";
+    video_worlds.src = "decor/prairie/prairie_worlds.webm";
+    video_download.src = "decor/prairie/prairie_download.webm";
+} else if (savedWorld === "foret") {
+    video_home.src = "decor/home.webm";
+    video_about.src = "decor/about.webm";
+    video_character.src = "decor/character.webm";
+    video_worlds.src = "decor/worlds.webm";
+    video_download.src = "decor/download.webm";
+} else if (savedWorld === "desert") {
+    video_home.src = "decor/desert/desert_home.webm";
+    video_about.src = "decor/desert/desert_about.webm";
+    video_character.src = "decor/desert/desert_character.webm";
+    video_worlds.src = "decor/desert/desert_world.webm";
+    video_download.src = "decor/desert/desert_download.webm";
+} else if (savedWorld === "jungle") {
+    video_home.src = "decor/jungle/jungle_home.webm";
+    video_about.src = "decor/jungle/jungle_about.webm";
+    video_character.src = "decor/jungle/jungle_character.webm";
+    video_worlds.src = "decor/jungle/jungle_worlds.webm";
+    video_download.src = "decor/jungle/jungle_download.webm";
+}
