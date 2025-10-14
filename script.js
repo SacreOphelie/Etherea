@@ -273,7 +273,7 @@ if (savedWorld === "prairie") {
     video_worlds.src = "decor/prairie/prairie_worlds.webm";
     video_download.src = "decor/prairie/prairie_download.webm";
 } else if (savedWorld === "foret") {
-    video_home.src = "decor/download.webm";
+    video_home.src = "decor/home.webm";
     video_about.src = "decor/about.webm";
     video_character.src = "decor/character.webm";
     video_worlds.src = "decor/worlds.webm";
