@@ -262,42 +262,39 @@ header{
 /* About */
 
 .content-about{
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.479);
+    background-image: url(illu/cadre/cadre_about.png);
+     background-size: 100% 100%; /* étire l’image sur toute la div */
+    background-repeat: no-repeat;
+    background-position: center center;
     z-index: 1;
     font-family: 'Roboto';
-    width: 40%;
-    margin-top: -150px;
+    width: 800px;
+    height: 375px;
+    margin-top: -200px;
     padding: 25px;
     border-radius: 25px;
-    backdrop-filter: blur(5px);
     animation: flotter 3s ease-in-out infinite;
     /* box-shadow: #62438f 0px 0px 15px 2px ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
 }
 
-.content-about h1{
-    text-align: center;
-    font-family: 'Etherea';
-    color:#62438f;
-    font-weight: normal;
-    font-size: 100px;
-    margin-bottom: 25px;
-    margin-top: -90px;
-    text-shadow: 
-    -1px -1px 0 rgb(255, 255, 255),
-     1px -1px 0 rgb(255, 255, 255),
-    -1px  1px 0 rgb(255, 255, 255),
-     1px  1px 0 rgb(255, 255, 255);
+.texte-about{
+    width: 95%;
+    margin-top: 35px;
 }
 
 .content-about p{
     margin-top: 15px;
     margin-left: 25px;
     font-size: 18px;
+    color: white;
 }
 
 .content-about p strong{
-    color: #62438f;
+    color: #ffc6eb;
 }
 
 /* Character */
