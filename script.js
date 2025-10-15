@@ -60,16 +60,16 @@ let currentRun = cattie_run;
 // fonction pour afficher un perso
 function showCharacter(idle, run) {
     // reset tous les persos
-    cattie_idl.style.opacity = 0;
-    cattie_run.style.opacity = 0;
-    lys_idl.style.opacity = 0;
-    lys_run.style.opacity = 0;
-    lavende_idl.style.opacity = 0;
-    lavende_run.style.opacity = 0;
+    cattie_idl.style.display = "none";
+    cattie_run.style.display = "none";
+    lys_idl.style.display = "none";
+    lys_run.style.display = "none";
+    lavende_idl.style.display = "none";
+    lavende_run.style.display = "none";
 
     // active le nouveau
-    idle.style.opacity = 1;
-    run.style.opacity = 0;
+    idle.style.display = "block";
+    run.style.display = "none";
 
     // met à jour le perso courant
     currentIdle = idle;
@@ -77,32 +77,72 @@ function showCharacter(idle, run) {
 }
 
 function showIdle() {
-    currentIdle.style.opacity = 1;
-    currentRun.style.opacity = 0;
+    currentIdle.style.display = "block";
+    currentRun.style.display = "none";
 }
 
 function showRun() {
-    currentIdle.style.opacity = 0;
-    currentRun.style.opacity = 1;
+    currentIdle.style.display= "none";
+    currentRun.style.display = "block";
 }
+
+ // Effet machine à écrire avec texte HTML
+const text_typing = document.querySelector(".texte_typing");
+const originalText = text_typing.textContent; // récupère le texte déjà présent
+text_typing.textContent = ""; // vide avant de commencer
+let i = 0;
+let speed_text = 50;
+
+function typeWriter() {
+    if (i < originalText.length) {
+        text_typing.textContent += originalText.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed_text);
+    }
+}
+
+// voir le texte du perso
+const texte_cattie = document.getElementById("texte-cattie");
+const texte_lys = document.getElementById("texte-lys");
+const texte_lavende = document.getElementById("texte-lavende");
 
 // clic sur les personnages
 card_lys.addEventListener("click", () => {
     showCharacter(lys_idl, lys_run);
     console.log("Lys cliqué !");
     localStorage.setItem("character", "lys");
+
+    // animation du cadre du perso sélectionné
+    card_lys.classList.toggle("active-card-lys");
+    card_cattie.classList.toggle("remove-card-cattie");
+    card_lavende.classList.toggle("remove-card-lavende");
+    texte_lys.classList.toggle("character-texte-active");
+    typeWriter();
 });
 
 card_lavende.addEventListener("click", () => {
     showCharacter(lavende_idl, lavende_run);
     console.log("Lavende cliqué !");
     localStorage.setItem("character", "lavende");
+
+    // animation du cadre du perso sélectionné
+    card_lavende.classList.toggle("active-card-lavende");
+    card_cattie.classList.toggle("remove-card-cattie");
+    card_lys.classList.toggle("remove-card-lys");
+    texte_lavende.classList.toggle("character-texte-active");
+    typeWriter();
 });
 
 card_cattie.addEventListener("click", () => {
     showCharacter(cattie_idl, cattie_run);
     console.log("Cattie cliqué !");
     localStorage.setItem("character", "cattie");
+
+    // animation du cadre du perso sélectionné
+    card_lavende.classList.toggle("remove-card-lavende");
+    card_lys.classList.toggle("remove-card-lys");
+    texte_cattie.classList.toggle("character-texte-active");
+    typeWriter();
 });
 
 // perso par défaut
@@ -226,6 +266,9 @@ const prairie = document.getElementById("prairie");
 const desert = document.getElementById("desert");
 const jungle = document.getElementById("jungle");
 
+// changement de la couleur du titre character : worlds
+const titre_character = document.getElementById("titre_character");
+
 foret.addEventListener("click", () => {
     video_home.src = "decor/home.webm";
     video_about.src = "decor/about.webm";
@@ -234,6 +277,8 @@ foret.addEventListener("click", () => {
     video_download.src = "decor/download.webm";
     console.log("Forêt cliqué !");
     localStorage.setItem("world", "foret");
+    titre_character.style.color = "#ffffffff";
+    titre_character.style.textShadow = "#c265c2 0px 0px 5px";
 }); 
 prairie.addEventListener("click", () => {
     video_home.src = "decor/prairie/prairie_home.webm";
@@ -242,7 +287,9 @@ prairie.addEventListener("click", () => {
     video_worlds.src = "decor/prairie/prairie_worlds.webm";
     video_download.src = "decor/prairie/prairie_download.webm";
     console.log("Prairie cliqué !");
-     localStorage.setItem("world", "prairie");
+    localStorage.setItem("world", "prairie");
+    titre_character.style.color = "#64428f";
+    titre_character.style.textShadow = "#ffc3f5ff 0px 0px 5px";
 });
 desert.addEventListener("click", () => {
     video_home.src = "decor/desert/desert_home.webm";
@@ -252,6 +299,8 @@ desert.addEventListener("click", () => {
     video_download.src = "decor/desert/desert_download.webm";
     console.log("Desert cliqué !");
     localStorage.setItem("world", "desert");
+    titre_character.style.color = "#ffffffff";
+    titre_character.style.textShadow = "#c265c2 0px 0px 5px";
 });
 jungle.addEventListener("click", () => {
     video_home.src = "decor/jungle/jungle_home.webm";
@@ -261,6 +310,8 @@ jungle.addEventListener("click", () => {
     video_download.src = "decor/jungle/jungle_download.webm";
     console.log("Jungle cliqué !");
     localStorage.setItem("world", "jungle");
+    titre_character.style.color = "#ffffffff";
+    titre_character.style.textShadow = "#2c642cff 0px 0px 5px";
 });
 
 // sauvegarde du choix des mondes 
