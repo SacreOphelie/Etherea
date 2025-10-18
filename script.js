@@ -80,6 +80,30 @@ let movingRight = false;
 
 const arrows = document.querySelector(".container-arrow");
 
+let timer;
+
+// Fonction pour réinitialiser le timer
+function resetTimer() {
+  arrows.style.opacity = 0;
+
+  // réinitialiser le timer
+  clearTimeout(timer);
+
+  // relancer le compte à rebours
+  timer = setTimeout(() => {
+    arrows.style.opacity = 1; // affiche après 30s d'inactivité
+  }, 10000);
+}
+
+// Détecter activité sur les flèches
+document.addEventListener("keydown", (e) => {
+  if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+    resetTimer();
+  }
+});
+
+resetTimer();
+
 
 // gestion des flèches de direction
 const direction_left = document.querySelector(".direction_left");
