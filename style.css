@@ -115,7 +115,7 @@ header{
 .cattie{
     width: 7%;
     position: absolute; 
-    bottom: 440px;     
+    bottom: 445px;     
     left: 150px;          
     transform: scaleX(1); 
     transition: transform 0.25s ease;
@@ -228,6 +228,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: #62438f 0px 0px 5px;
     /* background-color: blue; */
 }
 .direction_texte_left{
@@ -236,6 +237,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: #62438f 0px 0px 5px;
     /* background-color: blue; */
 }
 
@@ -309,15 +311,16 @@ header{
 #character{
     flex-direction: column;
 }
-#character h1{
+#titre_character{
     font-family: 'Etherea';
     font-weight: normal;
-    color: white;
-    margin-top: -200px;
+    color:#ffffff;
+    margin-top: -300px;
     font-size: 70px;
-    text-shadow: #c265c2 0px 0px 5px;
+    text-shadow: #753975ff  1px 1px 2px;
     animation: flotter 3s ease-in-out infinite;
 }
+
 .content-character{
     width: 55%;
     z-index: 1;
@@ -325,16 +328,6 @@ header{
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
-}
-
-#home h1{
-    font-family: 'Etherea';
-    font-weight: normal;
-    color: rgb(255, 255, 255);
-    margin-top: -200px;
-    font-size: 70px;
-    text-shadow: #c265c2 0px 0px 5px;
-    animation: flotter 3s ease-in-out infinite;
 }
 
 .card-character{
@@ -458,11 +451,24 @@ header{
 
 /* Worlds */
 
+#worlds{
+    flex-direction: column;
+}
+
+#titre_worlds{
+    font-family: 'Etherea';
+    font-weight: normal;
+    color:#9f45bb;
+    margin-top: -200px;
+    font-size: 70px;
+    text-shadow: rgb(255, 185, 152)  0px 0px 5px;
+    animation: flotter 3s ease-in-out infinite;
+}
 .container_worlds{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    margin-top: -200px;
+    margin-top: 50px;
 }
 
 .worlds_choice{
@@ -471,7 +477,10 @@ header{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #foret{
@@ -494,5 +503,170 @@ header{
     animation: flotter 2s ease-in-out infinite;
 }
 
+.worlds_behind {
+  transform: scale(0.8) translateY(50px);
+  opacity: 0.3;
+  z-index: 0;
+  filter: blur(2px);
+  transition: all 0.5s ease-in-out;
+}
+
+.texte-world{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texte-world p{
+    width: 80%;
+    font-family: 'Texte';
+    color: white;
+    font-size: 14px;
+}
+
+.p-bottom{
+    margin-top: 10px;
+}
+
+.texte-world-active-left{
+    opacity: 1;
+    z-index: 5;
+    transform: translate(425px);
+}
+.texte-world-active-right{
+    opacity: 1;
+    z-index: 5;
+    transform: translate(-425px);
+}
+
+#texte_foret{
+    background-image: url(illu/cadre/texte_foret.png);
+}
+
+#texte_prairie{
+    background-image: url(illu/cadre/texte_prairie.png);
+}
+
+#texte_desert{
+    background-image: url(illu/cadre/texte_desert.png);
+}
+
+#texte_jungle{
+    background-image: url(illu/cadre/texte_jungle.png);
+}
+
 /* Download */
 
+.content-download{
+    background-image: url(illu/cadre/cadre_download.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    width: 800px;
+    height: 500px;
+    margin-top: -200px;
+    margin-left: -500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-download{
+    width: 80%;
+    margin-top: 100px;
+}
+
+.text-download h3{
+    font-family: 'Etherea';
+    font-weight: normal;
+    color: white;
+    font-size: 30px;
+    margin-top: 0px;
+    text-shadow: #d490e2 0px 0px 5px;
+}
+.text-download p{
+    font-family: 'Texte';
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.content-download p strong{
+    color: #ffffff;
+    text-shadow: #d490e2 0px 0px 10px;
+}
+
+.available{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.available p{
+    font-family: 'Texte';
+    color: white;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.available img{
+    width: 25px;
+}
+
+.content-preorder{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.content-preorder a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Etherea';
+    font-size: 40px;
+}
+
+#preorder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 50px;
+    background-image: url(illu/bouton-menu/download.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#memory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-image: url(illu/bouton-menu/memory.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 25px;
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Etherea';
+    align-self: flex-end;
+    margin-top: -20px;
+    margin-right: 50px;
+}
