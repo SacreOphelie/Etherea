@@ -525,10 +525,10 @@ header{
 #titre_worlds{
     font-family: 'Etherea';
     font-weight: normal;
-    color:#9f45bb;
+    color:#ffffff;
     margin-top: -200px;
     font-size: 70px;
-    text-shadow: rgb(255, 185, 152)  0px 0px 5px;
+    text-shadow: #753975ff  1px 1px 2px;
     animation: flotter 3s ease-in-out infinite;
 }
 .container_worlds{

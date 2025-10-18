@@ -327,55 +327,100 @@ const texte_desert = document.getElementById("texte_desert");
 const texte_jungle = document.getElementById("texte_jungle");
 
 
+// Fonction pour réinitialiser tous les textes
+function resetWorldTexts() {
+    texte_foret.classList.remove("texte-world-active-left", "texte-world-active-right");
+    texte_prairie.classList.remove("texte-world-active-left", "texte-world-active-right");
+    texte_desert.classList.remove("texte-world-active-left", "texte-world-active-right");
+    texte_jungle.classList.remove("texte-world-active-left", "texte-world-active-right");
+    foret.classList.remove("worlds_behind");
+    prairie.classList.remove("worlds_behind");
+    desert.classList.remove("worlds_behind");
+    jungle.classList.remove("worlds_behind");
+}
+
+// --- Forêt ---
 foret.addEventListener("click", () => {
+
+    // Si la forêt est déjà active, on réinitialise et on arrête (toggle OFF)
+    if (texte_foret.classList.contains("texte-world-active-left")) {
+        resetWorldTexts();
+        updateMemoryLink();
+        return;
+    }
+
+    resetWorldTexts(); // on enlève les textes des autres mondes
+    prairie.classList.add("worlds_behind");
+    texte_foret.classList.add("texte-world-active-left"); // on active celui de la forêt
+    
+
     video_home.src = "decor/home.webm";
     video_about.src = "decor/about.webm";
     video_character.src = "decor/character.webm";
     video_worlds.src = "decor/worlds.webm";
     video_download.src = "decor/download.webm";
     console.log("Forêt cliqué !");
-    // sauvegarde du choix
     localStorage.setItem("world", "foret");
-    // changement couleur titres + sauvegarde
+
     titre_character.style.color = "#ffffffff";
     titre_character.style.textShadow = "#753975ff 0px 0px 8px";
     localStorage.setItem("titre_character_color", titre_character.style.color);
     localStorage.setItem("titre_character_shadow", titre_character.style.textShadow);
+
     titre_worlds.style.color = "#ffffffff";
-    titre_worlds.style.textShadow = "#753975ff  0px 0px 8px";
+    titre_worlds.style.textShadow = "#753975ff 0px 0px 8px";
     localStorage.setItem("titre_worlds_color", titre_worlds.style.color);
     localStorage.setItem("titre_worlds_shadow", titre_worlds.style.textShadow);
-    // animation du cadre du monde sélectionné
-    texte_foret.classList.toggle("texte-world-active-left");
-    prairie.classList.toggle("worlds_behind");
-    // mise à jour du lien de la memory
+
     updateMemoryLink();
-}); 
+});
+
+// --- Prairie ---
 prairie.addEventListener("click", () => {
+
+     if (texte_prairie.classList.contains("texte-world-active-right")) {
+        resetWorldTexts();
+        updateMemoryLink();
+        return;
+    }
+    resetWorldTexts();
+    foret.classList.add("worlds_behind");
+    texte_prairie.classList.add("texte-world-active-right");
+
     video_home.src = "decor/prairie/prairie_home.webm";
     video_about.src = "decor/prairie/prairie_about.webm";
     video_character.src = "decor/prairie/prairie_character.webm";
     video_worlds.src = "decor/prairie/prairie_worlds.webm";
     video_download.src = "decor/prairie/prairie_download.webm";
     console.log("Prairie cliqué !");
-    // sauvegarde du choix
     localStorage.setItem("world", "prairie");
-    // changement couleur titres + sauvegarde
+
     titre_character.style.color = "#64428f";
     titre_character.style.textShadow = "#ffc3f5ff 0px 0px 5px";
     localStorage.setItem("titre_character_color", titre_character.style.color);
     localStorage.setItem("titre_character_shadow", titre_character.style.textShadow);
+
     titre_worlds.style.color = "#64428f";
     titre_worlds.style.textShadow = "#ffc3f5ff 0px 0px 5px";
     localStorage.setItem("titre_worlds_color", titre_worlds.style.color);
     localStorage.setItem("titre_worlds_shadow", titre_worlds.style.textShadow);
-    // animation du cadre du monde sélectionné
-    texte_prairie.classList.toggle("texte-world-active-right");
-    foret.classList.toggle("worlds_behind");
-    // mise à jour du lien de la memory
+
     updateMemoryLink();
 });
+
+// --- Desert ---
 desert.addEventListener("click", () => {
+
+     if (texte_desert.classList.contains("texte-world-active-left")) {
+        resetWorldTexts();
+        updateMemoryLink();
+        return;
+    }
+
+    resetWorldTexts();
+    jungle.classList.add("worlds_behind");
+    texte_desert.classList.add("texte-world-active-left");
+
     video_home.src = "decor/desert/desert_home.webm";
     video_about.src = "decor/desert/desert_about.webm";
     video_character.src = "decor/desert/desert_character.webm";
@@ -383,21 +428,33 @@ desert.addEventListener("click", () => {
     video_download.src = "decor/desert/desert_download.webm";
     console.log("Desert cliqué !");
     localStorage.setItem("world", "desert");
+
     titre_character.style.color = "#62438f";
     titre_character.style.textShadow = "rgb(255, 185, 152) 0px 0px 5px";
     localStorage.setItem("titre_character_color", titre_character.style.color);
     localStorage.setItem("titre_character_shadow", titre_character.style.textShadow);
+
     titre_worlds.style.color = "#62438f";
     titre_worlds.style.textShadow = "rgb(255, 185, 152) 0px 0px 5px";
     localStorage.setItem("titre_worlds_color", titre_worlds.style.color);
     localStorage.setItem("titre_worlds_shadow", titre_worlds.style.textShadow);
-    // animation du cadre du monde sélectionné
-    texte_desert.classList.toggle("texte-world-active-left");
-    jungle.classList.toggle("worlds_behind");
-    // mise à jour du lien de la memory)
+
     updateMemoryLink();
 });
+
+// --- Jungle ---
 jungle.addEventListener("click", () => {
+
+     if (texte_jungle.classList.contains("texte-world-active-right")) {
+        resetWorldTexts();
+        updateMemoryLink();
+        return;
+    }
+
+    resetWorldTexts();
+    desert.classList.add("worlds_behind");
+    texte_jungle.classList.add("texte-world-active-right");
+
     video_home.src = "decor/jungle/jungle_home.webm";
     video_about.src = "decor/jungle/jungle_about.webm";
     video_character.src = "decor/jungle/jungle_character.webm";
@@ -405,18 +462,18 @@ jungle.addEventListener("click", () => {
     video_download.src = "decor/jungle/jungle_download.webm";
     console.log("Jungle cliqué !");
     localStorage.setItem("world", "jungle");
+
     titre_character.style.color = "#ffffffff";
     titre_character.style.textShadow = "#2c642cff 0px 0px 5px";
     localStorage.setItem("titre_character_color", titre_character.style.color);
     localStorage.setItem("titre_character_shadow", titre_character.style.textShadow);
+
     titre_worlds.style.color = "#ffffffff";
     titre_worlds.style.textShadow = "#2c642cff 0px 0px 5px";
     localStorage.setItem("titre_worlds_color", titre_worlds.style.color);
     localStorage.setItem("titre_worlds_shadow", titre_worlds.style.textShadow);
-    // animation du cadre du monde sélectionné
-    texte_jungle.classList.toggle("texte-world-active-right");
-    desert.classList.toggle("worlds_behind")
-    updateMemoryLink();
+
+    updateMemoryLink();q
 });
 
 // sauvegarde du choix des mondes 
@@ -466,9 +523,14 @@ const memoryLink = document.getElementById("memory");
 
 // Fonction pour modifier le lien à chaque choix
 function updateMemoryLink() {
-    const world = localStorage.getItem("world");
-    const character = localStorage.getItem("character");
+    let world = localStorage.getItem("world");
+    let character = localStorage.getItem("character");
+    // par defaut
+    // valeurs par défaut si rien n’est choisi
+    if (!world) world = "foret";
+    if (!character) character = "cattie";
     memoryLink.href = `illu/memory/${world}_${character}.png`;
+
 }
 updateMemoryLink();
 
