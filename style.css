@@ -29,14 +29,9 @@ a{
     cursor: none;
 }
 
-p{
-    font-family: 'Roboto';
-}
-
 #move{
     height: 50px;
     width: 50px;
-    border-radius: 10px;
     background-image: url(illu/cursor/cursor_artefact.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -81,8 +76,82 @@ header{
     margin-right: 20px;
     width: 75px;
     height: 75px;
+    z-index: 100;
 }
 
+.fond-burger{
+    fill: #61438f;
+}
+
+.contour-burger{
+    fill: white;
+}
+
+.barres {
+  transition: all 0.4s ease;
+  transform-origin: center;
+  fill: white;
+}
+
+.burger.active #ligne-haut {
+  transform: rotate(45deg) translate(150px, 100px) scaleX(2);
+}
+
+.burger.active #ligne-milieu {
+  opacity: 0;
+}
+
+.burger.active #ligne-bas {
+  transform: rotate(-45deg) translate(-180px, -100px) scaleX(2);
+}
+
+#burger{
+    width: 100%;
+    height: 100%;
+    background-color: #61438f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%); /* caché */
+    transition: transform 0.5s ease;
+}
+
+.active_burger{
+    transform: translateY(0) !important; /* visible */
+}
+
+
+.content_menu{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content_menu a{
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Etherea';
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bouton_download{
+    width: 200px;
+    background-image: url(illu/bouton-menu/download.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
 /* slides */
 
 .slides{
@@ -158,9 +227,9 @@ header{
 
 .container-arrow{
     background-color: #61438f00;
-    width: 300px;
-    height: 200px;
-    z-index: 1;
+    width: 200px;
+    height: 150px;
+    z-index: 10;
     position: fixed;
     bottom: 5%;
     left: 100px;
@@ -175,6 +244,9 @@ header{
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    animation: blink 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .container-arrow #right{
@@ -190,14 +262,9 @@ header{
     background-image: url(illu/arrow/up.png);
 }
 
-.right-active{
-    background-image: url(illu/arrow/right_down.png) !important;
-    width: 95%;
-}
-
-.left-active{
-    background-image: url(illu/arrow/left_down.png) !important;
-    width: 95%;
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }
 .direction{
     display: flex;

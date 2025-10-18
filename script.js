@@ -19,6 +19,55 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+// le menu burger
+const burger = document.querySelector('.burger');
+const menu_burger = document.getElementById('burger');
+const links = document.querySelectorAll('.content_menu a');
+
+burger.addEventListener('click', () => {
+burger.classList.toggle('active');
+menu_burger.classList.toggle('active_burger');
+});
+
+// Fermer le menu quand on clique sur un lien
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('active');
+    menu_burger.classList.remove('active_burger');
+  });
+});
+
+// problème lié à la gestion des slides résolution : 
+function goToSlide(index) {
+    slideIndex = index;       
+    // Place Cattie au centre de la slide pour éviter qu'elle déclenche le passage
+    cattieX = slideWidth / 2;  
+    cattie.style.left = cattieX + "px";
+    slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+    updateArrows();
+}
+document.querySelector('a[href="#home"]').addEventListener('click', (e) => {
+  e.preventDefault();   // Annule la navigation par défaut du lien
+  goToSlide(0);         // Passe manuellement à la diapositive "About"
+});
+document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
+  e.preventDefault();   // Annule la navigation par défaut du lien
+  goToSlide(1);         // Passe manuellement à la diapositive "About"
+});
+document.querySelector('a[href="#character"]').addEventListener('click', (e) => {
+  e.preventDefault();   // Annule la navigation par défaut du lien
+  goToSlide(2);         // Passe manuellement à la diapositive "About"
+});
+document.querySelector('a[href="#worlds"]').addEventListener('click', (e) => {
+  e.preventDefault();   // Annule la navigation par défaut du lien
+  goToSlide(3);         // Passe manuellement à la diapositive "About"
+});
+document.querySelector('a[href="#download"]').addEventListener('click', (e) => {
+  e.preventDefault();   // Annule la navigation par défaut du lien
+  goToSlide(4);         // Passe manuellement à la diapositive "About"
+});
+
+
 // CatTie bouge grâce aux flèches
 const cattie_idl = document.getElementById("cattie_idl");
 const cattie_run = document.getElementById("cattie_run");
@@ -28,8 +77,9 @@ let movingLeft = false;
 let movingRight = false; 
 
 // Arrow
-const arrow_right = document.getElementById("right");
-const arrow_left = document.getElementById("left");
+
+const arrows = document.querySelector(".container-arrow");
+
 
 // gestion des flèches de direction
 const direction_left = document.querySelector(".direction_left");
@@ -37,6 +87,7 @@ const direction_right = document.querySelector(".direction_right");
 const totalSlides = 5; 
 
 // Slides
+
 const slides = document.querySelector(".slides");
 let slideIndex = 0;
 const slideWidth = window.innerWidth;
@@ -203,13 +254,11 @@ document.addEventListener("keydown", (e) => {
         movingLeft = true;  
         cattie.style.transform = "scaleX(-1)"; 
         showRun();
-        arrow_left.classList.add("left-active");
     }
     if (e.key === "ArrowRight") { 
         movingRight = true; 
         cattie.style.transform = "scaleX(1)";  
         showRun();
-        arrow_right.classList.add("right-active");
     }
 
     // aller à droite
@@ -241,11 +290,9 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("keyup", (e) => {
     if (e.key === "ArrowLeft")  { 
         movingLeft = false; 
-        arrow_left.classList.remove("left-active");
     }
     if (e.key === "ArrowRight") { 
         movingRight = false; 
-        arrow_right.classList.remove("right-active");
     }
     if (!movingLeft && !movingRight) showIdle();
 });
@@ -424,3 +471,4 @@ function updateMemoryLink() {
     memoryLink.href = `illu/memory/${world}_${character}.png`;
 }
 updateMemoryLink();
+
