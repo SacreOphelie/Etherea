@@ -497,7 +497,7 @@ jungle.addEventListener("click", () => {
     localStorage.setItem("titre_worlds_color", titre_worlds.style.color);
     localStorage.setItem("titre_worlds_shadow", titre_worlds.style.textShadow);
 
-    updateMemoryLink();q
+    updateMemoryLink();
 });
 
 // sauvegarde du choix des mondes 

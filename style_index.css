@@ -9,6 +9,10 @@
     font-family: 'Roboto';
     src: url(typo/Roboto/Roboto-Regular.ttf) format('truetype');
 }
+@font-face{
+    font-family: 'Texte';
+    src: url(typo/ABeeZee/ABeeZee-Regular.ttf) format('truetype');
+}
 
 *{
     margin: 0;
@@ -18,6 +22,7 @@
 html,body{
     cursor: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 a{
@@ -25,7 +30,7 @@ a{
 }
 
 p{
-    font-family: 'Roboto';
+    font-family: 'Texte';
 }
 
 #move{
@@ -60,18 +65,36 @@ p{
     /* background-image: url(decor/décors-prairie.png); */
     z-index: 1;
     position: relative;
+    justify-content: space-between;
 }
 
 .logo-menu{
-    width: 50%;
+    width: 65%;
     margin-top: 50px;
     margin-left: 50px;
     transition: all 1s;
-
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
 
 .logo-menu img{
-    width: 100%;
+    width: 75%;
+}
+.point{
+    font-size: 40px;
+    font-family: 'Etherea';
+    color: rgb(122, 64, 160);
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+#video-games{
+    color: rgb(122, 64, 160);
+    font-family: 'Etherea';
+    font-weight: normal;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-top: 20px;
 }
 
 .content-menu{
@@ -100,9 +123,6 @@ p{
     transition: all 0.4s ease;
     /* background-color: blueviolet; */
 }
-
-
-
 .bouton-menu h1{
     font-weight: lighter;
     font-size: 90px;
@@ -115,9 +135,6 @@ p{
 .bouton-menu:hover h1{
     font-size: 100px;
 }
-
-
-
 
 @keyframes flotter {
     0%, 100% {
@@ -146,19 +163,83 @@ p{
 }
 
 .footer-menu{
-    margin-top: 100px;
+    margin-top: 90px;
     width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-image: url(illu/header/footer.png);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project p{
+    font-family: 'Texte';
+    text-align: center;
+}
+
+.reseau{
+    display: flex;
+    width: 12%;
+    justify-content: space-around;
+}
+
+.reseau a{
+    width: 50px;
     height: 50px;
+}
+.reseau a img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.content-mail{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    text-decoration: none !important;
+}
+.content-mail p{
+    color: white;
+    font-family: 'Texte' ;
+
+
+}
+.content-mail img{
+    width: 20px;
+}
+#signature{
+    margin-top: 10px;
+}
+
+.mention{
+    width: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    color: white;
-    flex-direction: column;
 }
 
-#signature{
-    margin-top: 10px;
+.mention a{
+    width: 50px;
+    height: 50px;
+}
+
+.mention a img{
+    width: 100%;
+    height: 100%;
 }
 
 /* Responsive Menu */
@@ -166,12 +247,24 @@ p{
 @media screen and (max-width:1500px) {
     .menu{
         align-items: center;
-        justify-content: center;
+
     }
     
     .logo-menu{
-        margin: 0;
+        margin-left: 0;
         width: 75%;
+        flex-direction: column;
+    }
+    .logo-menu img{
+        width: 100%;
+    }
+    .point{
+        display: none;
+        margin-top: 0px;
+    }
+    #video-games{
+        font-size: 40px;
+        margin-top: 0px;
     }
 
     .bouton-menu{
@@ -184,6 +277,12 @@ p{
 
     .bouton-menu:hover h1{
         font-size: 90px;
+    }
+    .reseau{
+        width: 15%;
+    }
+    .mention{
+        width: 15%;
     }
 }
 @media screen and (max-width:1250px) {
@@ -214,6 +313,19 @@ p{
     .bouton-menu:hover h1{
         font-size: 80px;
     }
+    .footer-menu{
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+    }
+    .reseau{
+        width: 20%;
+        margin-top: 10px;
+    }
+    .mention{
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 @media screen and (max-width:800px) {
 
@@ -227,11 +339,26 @@ p{
     .bouton-menu:hover h1{
         font-size: 70px;
     }
+    .reseau{
+        width: 30%;
+    }
+    .footer-menu{
+        background-image: url(illu/header/footer_tel.png);
+    }
 }
 @media screen and (max-width:620px) {
 
     .bouton-menu{
         height: 90px;
+    }
+    #video-games{
+        font-size: 30px;
+    }
+    .reseau{
+        width: 35%;
+    }
+    .project p{
+        font-size: 14px;
     }
 }
 @media screen and (max-width:500px) {
@@ -251,14 +378,17 @@ p{
     .bouton-menu:hover h1{
         font-size: 55px;
     }
-    .footer-menu{
-        width: 90%;
-        text-align: center;
-        font-size: 14px;
+    .reseau a{
+        width: 40px;
+        height: 40px;
     }
+    .mention a{
+        width: 40px;
+        height: 40px;
+    }
+
 }
 @media screen and (max-width:420px) {
-
 
     .bouton-menu{
         height: 65px;
@@ -270,9 +400,20 @@ p{
     .bouton-menu:hover h1{
         font-size: 45px;
     }
-    .footer-menu{
+    .footer-menu p{
         font-size: 12px;
     }
+    .footer-menu{
+        background-image: url(illu/header/footer_tel_420.png);
+        margin-top: 50px;
+    }
+    .reseau{
+        width: 75%;
+    }
+    .content-mail{
+        width: 58%;
+    }
+
 }
 @media screen and (max-width:340px) {
 
@@ -286,7 +427,15 @@ p{
     .bouton-menu:hover h1{
         font-size: 35px;
     }
-
+    #video-games{
+        font-size: 20px;
+    }
+    .content-mail{
+        width: 80%;
+    }
+    .footer-menu{
+        margin-top: 0;
+    }
 }
 @media screen and (max-width:240px) {
 
@@ -299,6 +448,18 @@ p{
 
     .bouton-menu:hover h1{
         font-size: 30px;
+    }
+    #video-games{
+        font-size: 14px;
+    }
+    .content-mail{
+        width: 95%;
+    }
+    .reseau{
+        width: 95%;
+    }
+    .footer-menu p{
+        font-size: 10px;
     }
 
 }

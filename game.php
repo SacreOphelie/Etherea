@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <?php
+        include("partials/favicon.php");
+    ?>
     <title>Home</title>
 </head>
 
@@ -54,7 +57,6 @@
         <?php include("pages/worlds.php") ?>   
         <?php include("pages/download.php") ?>         
     </div>
-    <?php include("partials/footer.php") ?>
 
     <script src="script.js"></script>
 </body>
