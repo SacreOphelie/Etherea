@@ -11,6 +11,6 @@
         <div class="content-preorder">
             <a href="https://store.steampowered.com" id="preorder">Pre-Order</a>
         </div>
-        <a href="illu/memory/foret_cattie.png" id="memory">Memory Photo</a>
+        <a href="illu/memory/foret_cattie.png" id="memory" download="">Memory Photo</a>
     </div>
 </div>

@@ -15,7 +15,8 @@
 <body>
     <div id="move"></div>
     <video autoplay muted loop id="fond-menu">
-        <source src="decor/prarie.webm" type="video/mp4">
+        <source src="decor/prarie.webm" type="video/webm">
+        <source src="decor/prarie.mp4" type="video/mp4">
     </video>
     <div class="menu">
         <div class="logo-menu">
