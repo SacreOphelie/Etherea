@@ -46,6 +46,7 @@ function goToSlide(index) {
     slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
     updateArrows();
 }
+
 document.querySelector('a[href="#home"]').addEventListener('click', (e) => {
   e.preventDefault();   // Annule la navigation par défaut du lien
   goToSlide(0);         // Passe manuellement à la diapositive "About"
@@ -271,6 +272,7 @@ function updateArrows() {
     rightText.textContent = slideIndex < totalSlides - 1 ? slidesNames[slideIndex + 1] : "";
 }
 updateArrows();
+
 
 // ---- Déplacements ----
 document.addEventListener("keydown", (e) => {

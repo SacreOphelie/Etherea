@@ -14,8 +14,9 @@
 </head>
 <body>
     <div id="move"></div>
-    <video autoplay muted loop id="fond-menu">
+    <video autoplay muted loop playsinline id="fond-menu">
         <source src="decor/prarie.webm" type="video/webm">
+        <!-- pour IOS -->
         <source src="decor/prarie.mp4" type="video/mp4">
     </video>
     <div class="menu">
@@ -32,8 +33,6 @@
         </div>
         <?php include("partials/footer.php") ?>
     </div>
-
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script>
         const move = document.getElementById("move");
 
@@ -47,7 +46,6 @@
         }, {duration: 1000, fill: "forwards"})
 
         }
-        // AOS.init();
     </script>
 </body>
 </html>

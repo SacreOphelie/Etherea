@@ -1,5 +1,5 @@
 <div class="slide" id="worlds">
-    <video autoplay muted loop class="fond" id="video_worlds">
+    <video autoplay muted loop playsinline class="fond" id="video_worlds">
         <source src="decor/worlds.webm" type="video/mp4">
     </video>
     <h1 id="titre_worlds">Choose your world !</h1>
