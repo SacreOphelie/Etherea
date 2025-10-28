@@ -10,7 +10,7 @@
     <?php
         include("partials/favicon.php");
     ?>
-    <title>Menu</title>
+    <title>Etherea</title>
 </head>
 <body>
     <div id="move"></div>

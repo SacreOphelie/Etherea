@@ -8,7 +8,7 @@
     <?php
         include("partials/favicon.php");
     ?>
-    <title>Home</title>
+    <title>Etherea</title>
 </head>
 
 <body>

@@ -1,6 +1,6 @@
 <div class="slide" id="download">
     <video autoplay muted loop playsinline class="fond" id="video_download">
-        <source src="decor/download.webm" type="video/mp4">
+        <source src="decor/download.webm" type="video/webm">
     </video>
     <div class="content-download">
         <div class="text-download">

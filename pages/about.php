@@ -1,6 +1,6 @@
 <div class="slide" id="about">
     <video autoplay muted loop playsinline class="fond" id="video_about">
-        <source src="decor/about.webm" type="video/mp4">
+        <source src="decor/about.webm" type="video/webm">
     </video>
     <div class="content-about">
         <div class="texte-about">     

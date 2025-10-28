@@ -1,6 +1,6 @@
 <div class="slide" id="character">
     <video autoplay muted loop playsinline class="fond" id="video_character">
-        <source src="decor/character.webm" type="video/mp4">
+        <source src="decor/character.webm" type="video/webm">
     </video>
     <h1 id="titre_character">Choose your character !</h1>
     <div class="content-character">            
