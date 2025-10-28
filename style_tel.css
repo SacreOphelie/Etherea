@@ -407,12 +407,9 @@ header{
 }
 
 .texte-world{
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    transform: translate(0px);
+    width: 500px;
+    height: 250px;
+    z-index: 5;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
@@ -422,26 +419,19 @@ header{
     flex-direction: column;
 }
 
+.page-world{
+    background-color: #61438f00;
+}
+
 .texte-world p{
     width: 80%;
     font-family: 'Texte';
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .p-bottom{
     margin-top: 10px;
-}
-
-.texte-world-active-left{
-    opacity: 1;
-    z-index: 5;
-    transform: translate(425px);
-}
-.texte-world-active-right{
-    opacity: 1;
-    z-index: 5;
-    transform: translate(-425px);
 }
 
 #texte_foret{
@@ -458,4 +448,105 @@ header{
 
 #texte_jungle{
     background-image: url(illu/cadre/texte_jungle.png);
+}
+
+#image_bas_world{
+    position: absolute;
+    bottom: -400px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+#image_bas_download{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Download */
+
+.content-download{
+    background-image: url(illu/cadre/cadre_download.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 10;
+    width: 800px;
+    height: 500px;
+    margin-top: 450px;
+    margin-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-download{
+    width: 80%;
+    margin-top: 100px;
+}
+
+.text-download h3{
+    font-family: 'Etherea';
+    font-weight: normal;
+    color: white;
+    font-size: 30px;
+    margin-top: 0px;
+    text-shadow: #d490e2 0px 0px 5px;
+}
+.text-download p{
+    font-family: 'Texte';
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.content-download p strong{
+    color: #ffffff;
+    text-shadow: #d490e2 0px 0px 10px;
+}
+
+.available{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.available p{
+    font-family: 'Texte';
+    color: white;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.available img{
+    width: 25px;
+}
+
+.content-preorder{
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-preorder a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Etherea';
+    font-size: 40px;
+}
+
+#preorder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 50px;
+    background-image: url(illu/bouton-menu/download.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

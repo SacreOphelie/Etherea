@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,17 @@
     <?php
         include("partials/favicon.php");
     ?>
+    <script>
+        function verifierTaille() {
+        if (window.innerWidth <= 1500) {
+            window.location.href = "tel.php";
+        }
+        }
+
+        // Vérifie au chargement et au redimensionnement
+        verifierTaille();
+        window.addEventListener("resize", verifierTaille);
+    </script>
     <title>Etherea</title>
 </head>
 
