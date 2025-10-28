@@ -145,15 +145,15 @@ p{
     }
 }
 
-#play{ 
+#discover{ 
     animation-delay: 0s;
     background-image: url(illu/bouton-menu/play.png);
 }
-#level{ 
+#faq{ 
     animation-delay: 0.2s; 
     background-image: url(illu/bouton-menu/level.png);
 }
-#settings{ 
+#contact{ 
     animation-delay: 0.4s; 
     background-image: url(illu/bouton-menu/settings.png);
 }

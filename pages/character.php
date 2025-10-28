@@ -14,7 +14,7 @@
         </div>
         <div class="card-character" id="card-lys">
             <div class="character-img">
-                <video src="perso/Lys_idl.webm" autoplay muted loop></video>
+                <video src="perso/Lys_idl.webm" autoplay muted loop></video> 
             </div>
             <div class="character-texte" id="texte-lys">
                 <p class="texte_typing">Hi! I’m Lys. I’m gentle and calm, but don’t be fooled, I’m stronger than I look! I love taking care of my friends and keeping everyone safe. I enjoy quiet mornings, soft music, and walking under the stars. I believe kindness is the greatest strength, and I always try to bring a little light wherever I go.</p>

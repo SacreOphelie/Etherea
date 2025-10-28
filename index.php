@@ -26,9 +26,9 @@
             <h1 id="video-games">Video Games</h1>
         </div>
         <div class="content-menu">
-            <a href="game.php" id="play" class="bouton-menu"><h1>Play</h1></a>
-            <a id="level" class="bouton-menu"><h1>Level</h1></a>
-            <a id="settings" class="bouton-menu"><h1>Settings</h1></a>
+            <a href="game.php" id="discover" class="bouton-menu"><h1>Discover</h1></a>
+            <a id="faq" class="bouton-menu"><h1>FAQ</h1></a>
+            <a id="contact" class="bouton-menu"><h1>Contact</h1></a>
             <a id="quit" class="bouton-menu"><h1>Quit</h1></a>
         </div>
         <?php include("partials/footer.php") ?>
@@ -37,14 +37,18 @@
         const move = document.getElementById("move");
 
         document.body.onpointermove = event => {
-        const { clientX, clientY } = event;
+            const { clientX, clientY } = event;
 
-        move.animate({
-            left: `${clientX}px`,
-            top: `${clientY}px`
-    
-        }, {duration: 1000, fill: "forwards"})
-
+            move.animate({
+                left: `${clientX}px`,
+                top: `${clientY}px`
+        
+            }, {duration: 1000, fill: "forwards"})
+        }
+        // modifier le lien quand on passe en dessous de 1500px vers le lien de la version mobile
+        const lien_tel = document.getElementById("discover");
+        if (window.innerWidth <= 1500) {
+            lien_tel.href = "tel.php";
         }
     </script>
 </body>

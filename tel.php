@@ -14,6 +14,51 @@
             <source src="decor/home.mp4" type="video/mp4" >
         </video>
     </div>
+    <div class="slide" id="about">
+        <img src="illu/tel/tablette_about_haut.png" alt="" id="image_haut_about">
+        <div class="content-about">
+            <div class="texte-about">     
+                <p>Dive into a 2D adventure where friendship, courage, and magic come together. The companions world is slowly <strong>falling into darkness</strong>, the forests lose their glow, the rivers their light. To save their home, they must travel to Etherea, the legendary world where magic was born.</p>
+        
+                <P>Their journey will lead them through <strong>mysterious lands filled with danger and wonder</strong>, where they’ll have to learn to master the ancient art of magic to restore balance and bring light back to their world.</P>
+        
+                <p>If you want to discover more, <strong>head to the left</strong> : there you’ll find the characters and the different worlds of Etherea. Already convinced? <strong>Open the menu and go on Download !</strong> </p>
+            </div>
+        </div>
+        <img src="illu/tel/tablette_about_bas.png" alt="" id="image_bas_about">
+    </div>
+    <div class="slide" id="character">
+        <h1 id="titre_character">Choose your character !</h1>
+        <div class="content-character">            
+            <a href="character_cattie.php" class="card-character" id="card-cattie">
+                <div class="character-img">
+                    <video src="perso/CatTie_idl.webm" autoplay muted loop ></video>
+                </div>
+            </a>
+            <a href="character_lys.php" class="card-character" id="card-lys">
+                <div class="character-img">
+                    <video src="perso/Lys_idl.webm" autoplay muted loop></video>
+                </div>
+            </a>
+            <a href="character_lavende.php" class="card-character" id="card-lavende">
+                <div class="character-img">
+                    <video src="perso/Lavende_idl.webm" autoplay muted loop></video>
+                </div>
+            </a>
+        </div>
+        <img src="illu/tel/tablette_character_bas.png" alt="" id="image_bas_character">
+    </div>
+
+    <div class="slide" id="worlds">
+        <h1 id="titre_worlds">Choose your world !</h1>
+        <div class="container_worlds">
+            <a href="foret.php" id="foret" class="worlds_choice"></a>
+            <a href="prairie.php" id="prairie" class="worlds_choice"></a>
+            <a href="desert.php" id="desert" class="worlds_choice"></a>
+            <a href="jungle.php" id="jungle" class="worlds_choice"></a>
+        </div>
+    </div>
+    <div class="slide" id="download"></div>
     <script>
         // le menu burger
         const burger = document.querySelector('.burger');

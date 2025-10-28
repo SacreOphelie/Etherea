@@ -17,7 +17,6 @@
 
 html,body{
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 @keyframes flotter {
@@ -39,7 +38,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
 }
 
 .echap{
@@ -56,7 +55,6 @@ header{
     margin-right: 20px;
     width: 75px;
     height: 75px;
-    z-index: 100;
 }
 
 .fond-burger{
@@ -92,7 +90,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 6;
+    z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,19 +134,328 @@ header{
 .slide{
     position: relative;
     width: 100%;
-    height: 100vh;
-    flex-shrink: 0;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #9ca9e7;
 }
-
 .fond{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+/* Home */
+
+#home{
+    background-color: #9ca8e700;
+}
+
+/* About */
+
+#image_haut_about{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: -50px;
+    z-index: 5;
+}
+#image_bas_about{
+    position: absolute;
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.content-about{
+    background-image: url(illu/cadre/cadre_about.png);
+    background-size: 100% 100%; /* étire l’image sur toute la div */
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 55%;
+    height: 500px;
+    z-index: 1;
+    padding: 25px;
+    animation: flotter 3s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    margin-top: 300px;
+}
+
+.texte-about{
+    width: 95%;
+    margin-top: 35px;
+}
+
+.content-about p{
+    font-family: 'Texte';
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.content-about p strong{
+    color: #ffffff;
+    text-shadow: #f2b3ff 0px 0px 10px;
+}
+
+/* Character */ 
+
+#character{
+    margin-top: -1px;
+    flex-direction: column;
+}
+
+#titre_character{
+    font-family: 'Etherea';
+    font-weight: normal;
+    color:#ffffff;
+    margin-top: 300px;
+    font-size: 70px;
+    text-shadow: #753975ff  1px 1px 2px;
+    animation: flotter 3s ease-in-out infinite;
+}
+
+.content-character{
+    width: 80%;
+    z-index: 1;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-character{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    width: 250px;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 25px;
+}
+
+
+#card-cattie{
+    background-image: url(illu/cadre/cadre_Cat.png);
+}
+
+#card-lys{
+    background-image: url(illu/cadre/cadre_Lys.png);
+}
+
+#card-lys .character-img{
+    margin-top: 10px;
+    width: 55%;
+}
+
+#card-lavende{
+    background-image: url(illu/cadre/cadre_Lavende.png);
+}
+
+.character-img{
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-img video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* page character*/
+
+.content-page-character{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cattie{
+    background-image: url(illu/cadre/cadre_Cat.png);
+    width: 350px;
+    height: 550px;
+    margin-top: 0;
+}
+#lys{
+    background-image: url(illu/cadre/cadre_Lys.png);
+    width: 350px;
+    height: 550px;
+    margin-top: 0;
+}
+#lavende{
+    background-image: url(illu/cadre/cadre_Lavende.png);
+    width: 350px;
+    height: 550px;
+    margin-top: 0;
+}
+
+.character-texte{
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: -300px;
+}
+
+#texte-cattie{
+    background-image: url(illu/cadre/cadre_texte_cattie.png);
+}
+
+#texte-lys{
+    background-image: url(illu/cadre/cadre_texte_lys.png);
+}
+
+#texte-lavende{
+    background-image: url(illu/cadre/cadre_texte_lavende.png);
+}
+
+.character-texte p{
+    text-align: center;
+    width: 75%;
+    color: #ffffff;
+    font-family: 'Texte';
+    font-size: 16px;
+}
+
+#image_bas_character{
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Worlds */
+
+#worlds{
+    flex-direction: column;
+    margin-top: -1px;
+}
+
+#titre_worlds{
+    font-family: 'Etherea';
+    font-weight: normal;
+    color:#ffffff;
+    margin-top: 450px;
+    font-size: 70px;
+    text-shadow: #753975ff  1px 1px 2px;
+    animation: flotter 3s ease-in-out infinite;
+}
+.container_worlds{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top:100px;
+}
+
+.worlds_choice{
+    width: 400px;
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foret{
+    background-image: url(illu/cadre/cadre_foret.png);
+    animation: flotter 2s ease-in infinite;
+}
+
+#prairie{
+    background-image: url(illu/cadre/cadre_prairie.png);
+    animation: flotter 2s ease-out infinite;
+}
+
+#desert{
+    background-image: url(illu/cadre/cadre_desert.png);
+    animation: flotter 2s ease-out infinite;
+}
+
+#jungle{
+    background-image: url(illu/cadre/cadre_jungle.png);
+    animation: flotter 2s ease-in-out infinite;
+}
+
+.texte-world{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texte-world p{
+    width: 80%;
+    font-family: 'Texte';
+    color: white;
+    font-size: 14px;
+}
+
+.p-bottom{
+    margin-top: 10px;
+}
+
+.texte-world-active-left{
+    opacity: 1;
+    z-index: 5;
+    transform: translate(425px);
+}
+.texte-world-active-right{
+    opacity: 1;
+    z-index: 5;
+    transform: translate(-425px);
+}
+
+#texte_foret{
+    background-image: url(illu/cadre/texte_foret.png);
+}
+
+#texte_prairie{
+    background-image: url(illu/cadre/texte_prairie.png);
+}
+
+#texte_desert{
+    background-image: url(illu/cadre/texte_desert.png);
+}
+
+#texte_jungle{
+    background-image: url(illu/cadre/texte_jungle.png);
 }
