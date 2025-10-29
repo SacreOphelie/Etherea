@@ -200,7 +200,7 @@ header{
     font-family: 'Texte';
     margin-top: 15px;
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 }
 
@@ -370,7 +370,7 @@ header{
 .container_worlds{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 50px;
     margin-top:100px;
 }
 
@@ -466,7 +466,9 @@ header{
 }
 
 /* Download */
-
+#download{
+    margin-top: -1px;
+}
 .content-download{
     background-image: url(illu/cadre/cadre_download.png);
     background-size: 100% 100%;
@@ -549,4 +551,660 @@ header{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+@media screen and (max-width:1000px)
+{
+    .content-about{
+        width: 60%;
+        height: 400px;
+        margin-top: 250px;
+    }
+    #titre_character{
+        margin-top: 350px;
+        font-size: 70px;
+    }
+
+    .content-character{
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .card-character{
+        width: 200px;
+        height: 300px;
+        margin-top: 25px;
+    }
+    #image_bas_character{
+        bottom: -350px;
+    }
+    #titre_worlds{
+        margin-top: 350px;
+        font-size: 70px;
+    }
+    .container_worlds{
+        margin-top:75px;
+    }
+
+    .worlds_choice{
+        width: 350px;
+        height: 250px;
+    }
+    #cattie{
+        width: 350px;
+        height: 500px;
+    }
+    #lys{
+        width: 350px;
+        height: 500px;
+    }
+    #lavende{
+        width: 350px;
+        height: 500px;
+    }
+    .character-texte{
+        width: 550px;
+        height: 250px;
+        margin-top: -200px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    .content-about{
+        width: 75%;
+        height: 400px;
+        margin-top: 200px;
+    }
+    .content-about p{
+        font-size: 14px;
+    }
+    #image_bas_about {
+        bottom: -200px;
+    }
+    #titre_character{
+        margin-top: 250px;
+        font-size: 70px;
+    }
+
+    .content-character{
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .card-character{
+        width: 180px;
+        height: 280px;
+        margin-top: 25px;
+    }
+    #cattie{
+        width: 300px;
+        height: 350px;
+    }
+    #lys{
+        width: 300px;
+        height: 350px;
+    }
+    #lavende{
+        width: 300px;
+        height: 350px;
+    }
+    .character-texte{
+        width: 500px;
+        height: 200px;
+        margin-top: -100px;
+        margin-left: 50px;
+    }
+    .character-texte p{
+        font-size: 12px;
+    }
+    #image_bas_character{
+        bottom: -300px;
+    }
+    #titre_worlds{
+        margin-top: 275px;
+        font-size: 70px;
+    }
+    .container_worlds{
+        margin-top:75px;
+        gap: 25px;
+    }
+
+    .worlds_choice{
+        width: 300px;
+        height: 200px;
+    }
+    .texte-world{
+        width: 50%;
+        height: 250px;
+    }
+
+    .texte-world p{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    #image_bas_world {
+        bottom: -200px;
+    }
+    .content-download{
+        width: 90%;
+        height: 450px;
+        margin-top: 250px;
+        margin-bottom: 250px;
+    }
+    .text-download h3{
+        font-size: 30px;
+    }
+    .text-download p{
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .available{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+
+    .available p{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    .available img{
+        width: 25px;
+    }
+
+    .content-preorder{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .content-preorder a{
+        font-size: 40px;
+    }
+
+    #preorder{
+        width: 175px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:620px)
+{
+    header{
+        height: 75px;
+    }
+    .echap{
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .burger{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .content-about{
+        width: 75%;
+        height: 300px;
+        margin-top: 150px;
+    }
+    .content-about p{
+        font-size: 12px;
+    }
+    #image_bas_about {
+        bottom: -150px;
+    }
+    #titre_character{
+        margin-top: 200px;
+        font-size: 50px;
+    }
+
+    .content-character{
+        width: 80%;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    .card-character{
+        width: 180px;
+        height: 280px;
+        margin-top: 25px;
+    }
+    #cattie{
+        width: 300px;
+        height: 250px;
+    }
+    #lys{
+        width: 300px;
+        height: 250px;
+    }
+    #lavende{
+        width: 300px;
+        height: 250px;
+    }
+    .character-texte{
+        width: 550px;
+        height: 150px;
+        margin-top: -150px;
+        margin-left: 25px;
+    }
+    .character-texte p{
+        font-size: 10px;
+    }
+    #image_bas_character{
+        bottom: -200px;
+    }
+    #titre_worlds{
+        margin-top: 200px;
+        font-size: 50px;
+    }
+    .container_worlds{
+        margin-top:50px;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .worlds_choice{
+        width: 300px;
+        height: 200px;
+    }
+    .texte-world{
+        width: 50%;
+        height: 175px;
+    }
+    .texte-world p{
+        width: 80%;
+        font-size: 12px;
+    }
+    #image_bas_world {
+        bottom: -200px;
+    }
+    .content-download{
+        width: 90%;
+        height: 400px;
+        margin-top: 250px;
+        margin-bottom: 250px;
+    }
+    .text-download h3{
+        font-size: 25px;
+    }
+    .text-download p{
+        font-size: 12px;
+        margin-top: 25px;
+    }
+
+    .available{
+        margin-top: 15px;
+        width: 80%;
+    }
+
+    .available p{
+        font-size: 10px;
+        margin-left: 15px;
+    }
+    .available img{
+        width: 25px;
+    }
+
+    .content-preorder{
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .content-preorder a{
+        font-size: 25px;
+    }
+    #preorder{
+        width: 150px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .content_menu a{
+        font-size: 35px;
+    }
+    .content-about{
+        width: 75%;
+        height: 250px;
+        margin-top: 50px;
+    }
+    .content-about p{
+        font-size: 10px;
+        margin-left: 0px;
+    }
+    #image_bas_about {
+        bottom: -150px;
+    }
+    #titre_character{
+        margin-top: 200px;
+        font-size: 50px;
+    }
+
+    .content-character{
+        width: 80%;
+        margin-top: 25px;
+    }
+    .card-character{
+        width: 180px;
+        height: 280px;
+        margin-top: 25px;
+    }
+    .content-page-character{
+        /* flex-direction: column; */
+        margin-top: 50px;
+    }
+    #cattie{
+        width: 180px;
+        height: 280px;
+    }
+    #lys{
+        width: 180px;
+        height: 280px;
+    }
+    #lavende{
+        width: 180px;
+        height: 280px;
+    }
+    .character-texte{
+        width: 50%;
+        height: 100px;
+        margin-top: 25px;
+        margin-left: 0px;
+        background-image: none !important;
+    }
+    .character-texte p{
+        width: 100%;
+        font-size: 10px;
+        text-shadow: #61438f 0px 0px 5px;
+    }
+    #image_bas_character{
+        bottom: -200px;
+    }
+    #titre_worlds{
+        margin-top: 200px;
+        font-size: 50px;
+    }
+    .container_worlds{
+        margin-top:50px;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .worlds_choice{
+        width: 250px;
+        height: 150px;
+    }
+    .texte-world p{
+        font-size: 10px;
+    }
+
+    #image_bas_world {
+        bottom: -200px;
+    }
+
+    .content-download{
+        width: 90%;
+        height: 350px;
+        margin-top: 250px;
+        margin-bottom: 150px;
+    }
+    .text-download h3{
+        font-size: 20px;
+        margin-top: -25px;
+    }
+    .text-download p{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .available{
+        margin-top: 15px;
+        width: 80%;
+    }
+
+    .available p{
+        font-size: 8px;
+        margin-left: 10px;
+    }
+    .available img{
+        width: 20px;
+    }
+
+    .content-preorder{
+        width: 80%;
+        margin-top: 15px;
+    }
+
+    .content-preorder a{
+        font-size: 25px;
+    }
+    #preorder{
+        width: 150px;
+        height: 35px;
+    }
+}
+@media screen and (max-width:400px)
+{
+    .content_menu a{
+        width: 75px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    #bouton_download{
+        width: 150px;
+    }
+
+    .content-about{
+        width: 75%;
+        height: 250px;
+        margin-top: 50px;
+    }
+    .content-about p{
+        width: 100%;
+        margin-top: 5px;
+    }
+    #image_bas_about {
+        bottom: -150px;
+    }
+    #titre_character{
+        margin-top: 200px;
+        font-size: 35px;
+    }
+
+    .content-character{
+        width: 80%;
+        margin-top: 25px;
+    }
+    .card-character{
+        width: 150px;
+        height: 250px;
+        margin-top: 25px;
+    }
+    .content-page-character{
+        /* flex-direction: column; */
+        margin-top: 50px;
+    }
+    #cattie{
+        width: 150px;
+        height: 250px;
+    }
+    #lys{
+        width: 150px;
+        height: 250px;
+    }
+    #lavende{
+        width: 150px;
+        height: 250px;
+    }
+    .character-texte{
+        width: 50%;
+        height: 100px;
+        margin-top: 0px;
+    }
+    .character-texte p{
+        width: 100%;
+        font-size: 10px;
+    }
+    #image_bas_character{
+        bottom: -200px;
+    }
+    #titre_worlds{
+        margin-top: 200px;
+        font-size: 35px;
+    }
+    .container_worlds{
+        margin-top:50px;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .worlds_choice{
+        width: 200px;
+        height: 125px;
+    }
+    .texte-world{
+        width: 75%;
+    }
+    .texte-world p{
+        width: 80%;
+        font-size: 10px;
+    }
+
+    #image_bas_world {
+        bottom: -200px;
+    }
+}
+@media screen and (max-width:320px)
+{
+    #image_haut_about{
+        margin-top: 0px;
+    }
+    .content_menu a{
+        font-size: 35px;
+    }
+
+    .content-about{
+        background-image: url(illu/tel/cadre_about.png);
+        width: 75%;
+        height: 250px;
+        margin-top: 25px;
+    }
+    .content-about p{
+        text-align: center;
+        font-size: 10px;
+        margin-left: 0px;
+    }
+    #image_bas_about {
+        bottom: 0px;
+    }
+    #titre_character{
+        margin-top: 50px;
+        font-size: 34px;
+    }
+    .content-character{
+        width: 80%;
+        margin-top: 25px;
+    }
+    .card-character{
+        width: 180px;
+        height: 280px;
+        margin-top: 25px;
+    }
+    .content-page-character{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #cattie{
+        width: 180px;
+        height: 280px;
+    }
+    #lys{
+        width: 180px;
+        height: 280px;
+    }
+    #lavende{
+        width: 180px;
+        height: 280px;
+    }
+    .character-texte{
+        width: 95%;
+        height: 100px;
+        margin-top: 50px;
+    }
+    #image_bas_character{
+        bottom: -150px;
+    }
+    #titre_worlds{
+        margin-top: 200px;
+        font-size: 34px;
+    }
+    .container_worlds{
+        margin-top:50px;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .worlds_choice{
+        width:95%;
+        height: 150px;
+    }
+    .texte-world p{
+        font-size: 10px;
+    }
+
+    #image_bas_world {
+        bottom: -200px;
+    }
+
+    .content-download{
+        width: 90%;
+        height: 350px;
+        margin-top: 250px;
+        margin-bottom: 100px;
+        background-image: url(illu/tel/cadre_download_tel.png);
+    }
+    .text-download h3{
+        font-size: 20px;
+        margin-top: -50px;
+        text-align: center;
+    }
+    .text-download p{
+        text-align: center;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .available{
+        margin-top: 15px;
+        width: 80%;
+    }
+
+    .available p{
+        font-size: 8px;
+        margin-left: 10px;
+    }
+    .available img{
+        width: 20px;
+    }
+
+    .content-preorder{
+        width: 80%;
+        margin-top: 15px;
+    }
+
+    .content-preorder a{
+        font-size: 20px;
+    }
+    #preorder{
+        width: 100px;
+        height: 30px;
+    }
 }

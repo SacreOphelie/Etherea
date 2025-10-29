@@ -33,7 +33,7 @@
         
                 <P>Their journey will lead them through <strong>mysterious lands filled with danger and wonder</strong>, where they’ll have to learn to master the ancient art of magic to restore balance and bring light back to their world.</P>
         
-                <p>If you want to discover more, <strong>head to the left</strong> : there you’ll find the characters and the different worlds of Etherea. Already convinced? <strong>Open the menu and go on Download !</strong> </p>
+                <p>If you want to discover more, <strong>head to the bottom</strong> : there you’ll find the characters and the different worlds of Etherea. Already convinced? <strong>Open the menu and go on Download !</strong> </p>
             </div>
         </div>
         <img src="illu/tel/tablette_about_bas.png" alt="" id="image_bas_about">
@@ -74,7 +74,7 @@
         <div class="content-download">
             <div class="text-download">
                 <h3>Did you like this website ?</h3>
-                <p>I hope you enjoyed discovering this little piece of my universe! <strong>The full game will be released very soon.</strong> If you’re curious to see more, you can already <strong>pre-order</strong> it here to be among the first to explore the world, meet its characters, and uncover the story behind it. And if you’d like to keep a small memory before the adventure begins, don’t forget to grab <strong>your little souvenir photo right here!</strong></p>
+                <p>I hope you enjoyed discovering this little piece of my universe! <strong>The full game will be released very soon.</strong> If you’re curious to see more, you can already <strong>pre-order</strong> it here to be among the first to explore the world, meet its characters, and uncover the story behind it.</p>
             </div>
             <div class="available"><img src="illu/icone/pc.png" alt=""><p>only available on PC</p></div>
             <div class="content-preorder">

@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="character-texte" id="texte-cattie">
-            <p>Hi! I’m Cattie. I may seem a little shy, but I love discovering new places beyond my cozy forest. My pink hood makes me feel safe and brave, too! I always try to help my friends, even when I’m scared. I believe that no matter how small we are, we can still make a big difference.</p>
+            <p>Hi ! I’m Cattie. I may seem a little shy, but I love discovering new places beyond my cozy forest. My pink hood makes me feel safe and brave, too ! I always try to help my friends, even when I’m scared. I believe that no matter how small we are, we can still make a big difference.</p>
         </div>
     </div>
 </div>
