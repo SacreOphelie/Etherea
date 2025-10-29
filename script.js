@@ -353,32 +353,13 @@ const texte_desert = document.getElementById("texte_desert");
 const texte_jungle = document.getElementById("texte_jungle");
 
 
-// Fonction pour réinitialiser tous les textes
-function resetWorldTexts() {
-    texte_foret.classList.remove("texte-world-active-left", "texte-world-active-right");
-    texte_prairie.classList.remove("texte-world-active-left", "texte-world-active-right");
-    texte_desert.classList.remove("texte-world-active-left", "texte-world-active-right");
-    texte_jungle.classList.remove("texte-world-active-left", "texte-world-active-right");
-    foret.classList.remove("worlds_behind");
-    prairie.classList.remove("worlds_behind");
-    desert.classList.remove("worlds_behind");
-    jungle.classList.remove("worlds_behind");
-}
-
 // --- Forêt ---
 foret.addEventListener("click", () => {
 
-    // Si la forêt est déjà active, on réinitialise et on arrête (toggle OFF)
-    if (texte_foret.classList.contains("texte-world-active-left")) {
-        resetWorldTexts();
-        updateMemoryLink();
-        return;
-    }
-
-    resetWorldTexts(); // on enlève les textes des autres mondes
-    prairie.classList.add("worlds_behind");
-    texte_foret.classList.add("texte-world-active-left"); // on active celui de la forêt
-    
+    texte_foret.classList.toggle("texte-world-active");
+    texte_prairie.classList.remove("texte-world-active");
+    texte_desert.classList.remove("texte-world-active");
+    texte_jungle.classList.remove("texte-world-active");
 
     video_home.src = "decor/home.webm";
     video_about.src = "decor/about.webm";
@@ -404,14 +385,11 @@ foret.addEventListener("click", () => {
 // --- Prairie ---
 prairie.addEventListener("click", () => {
 
-     if (texte_prairie.classList.contains("texte-world-active-right")) {
-        resetWorldTexts();
-        updateMemoryLink();
-        return;
-    }
-    resetWorldTexts();
-    foret.classList.add("worlds_behind");
-    texte_prairie.classList.add("texte-world-active-right");
+    texte_prairie.classList.toggle("texte-world-active");
+    texte_foret.classList.remove("texte-world-active");
+    texte_desert.classList.remove("texte-world-active");
+    texte_jungle.classList.remove("texte-world-active");
+
 
     video_home.src = "decor/prairie/prairie_home.webm";
     video_about.src = "decor/prairie/prairie_about.webm";
@@ -437,15 +415,11 @@ prairie.addEventListener("click", () => {
 // --- Desert ---
 desert.addEventListener("click", () => {
 
-     if (texte_desert.classList.contains("texte-world-active-left")) {
-        resetWorldTexts();
-        updateMemoryLink();
-        return;
-    }
+    texte_desert.classList.toggle("texte-world-active");
+    texte_prairie.classList.remove("texte-world-active");
+    texte_foret.classList.remove("texte-world-active");
+    texte_jungle.classList.remove("texte-world-active");
 
-    resetWorldTexts();
-    jungle.classList.add("worlds_behind");
-    texte_desert.classList.add("texte-world-active-left");
 
     video_home.src = "decor/desert/desert_home.webm";
     video_about.src = "decor/desert/desert_about.webm";
@@ -471,15 +445,10 @@ desert.addEventListener("click", () => {
 // --- Jungle ---
 jungle.addEventListener("click", () => {
 
-     if (texte_jungle.classList.contains("texte-world-active-right")) {
-        resetWorldTexts();
-        updateMemoryLink();
-        return;
-    }
-
-    resetWorldTexts();
-    desert.classList.add("worlds_behind");
-    texte_jungle.classList.add("texte-world-active-right");
+    texte_jungle.classList.toggle("texte-world-active");
+    texte_foret.classList.remove("texte-world-active");
+    texte_prairie.classList.remove("texte-world-active");
+    texte_desert.classList.remove("texte-world-active");
 
     video_home.src = "decor/jungle/jungle_home.webm";
     video_about.src = "decor/jungle/jungle_about.webm";

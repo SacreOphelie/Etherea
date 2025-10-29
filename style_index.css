@@ -102,7 +102,6 @@ p{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -116,16 +115,16 @@ p{
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 40%;
-    height: 125px;
-    margin-top: 25px;
+    width: 50%;
+    height: 100px;
+    margin-top: 50px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     /* background-color: blueviolet; */
 }
 .bouton-menu h1{
     font-weight: lighter;
-    font-size: 90px;
+    font-size: 75px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
@@ -165,7 +164,7 @@ p{
 .footer-menu{
     margin-top: 90px;
     width: 100%;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -186,6 +185,7 @@ p{
 .project p{
     font-family: 'Texte';
     text-align: center;
+    font-size: 20px;
 }
 
 .reseau{
@@ -201,12 +201,10 @@ p{
 .reseau a img{
     width: 100%;
     height: 100%;
-
 }
 
 .content-mail{
     display:flex;
-    justify-content: space-around;
     align-items: center;
     width: 50%;
     height: 50px;
@@ -215,11 +213,10 @@ p{
 .content-mail p{
     color: white;
     font-family: 'Texte' ;
-
-
 }
 .content-mail img{
-    width: 20px;
+    width: 30px;
+    margin-right: 15px;
 }
 #signature{
     margin-top: 10px;
@@ -247,7 +244,6 @@ p{
 @media screen and (max-width:1500px) {
     .menu{
         align-items: center;
-
     }
     
     .logo-menu{
@@ -266,17 +262,17 @@ p{
         font-size: 40px;
         margin-top: 0px;
     }
-
     .bouton-menu{
-        margin-top: 10px;
+        height: 90px;
+        margin-top: 50px;
     }
 
     .bouton-menu h1{
-        font-size: 80px;
+        font-size: 75px;
     }
 
     .bouton-menu:hover h1{
-        font-size: 90px;
+        font-size: 85px;
     }
     .reseau{
         width: 15%;
@@ -305,6 +301,7 @@ p{
     .bouton-menu{
         width: 60%;
         height: 110px;
+        margin-top: 25px;
     }
     .bouton-menu h1{
         font-size: 70px;
@@ -325,6 +322,9 @@ p{
     .mention{
         width: 100%;
         margin-top: 10px;
+    }
+    .content-mail img{
+        width: 25px;
     }
 }
 @media screen and (max-width:800px) {
@@ -413,6 +413,9 @@ p{
     .content-mail{
         width: 58%;
     }
+    .content-mail img{
+        width: 20px;
+    }
 
 }
 @media screen and (max-width:340px) {
@@ -474,6 +477,10 @@ p{
 
     .bouton-menu:hover h1{
         font-size: 25px;
+    }
+    .content-mail img{
+        width: 15px;
+        margin-right: 10px;
     }
 }
 @media screen and (max-width:110px) {

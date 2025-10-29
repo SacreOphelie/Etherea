@@ -37,7 +37,7 @@ a{
     background-repeat: no-repeat;
     background-position: center center;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
 }
 
 
@@ -56,12 +56,13 @@ a{
 header{
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
     /* background-color: #62438f; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    margin-top: 20px;
 }
 
 .echap{
@@ -127,7 +128,6 @@ header{
 
 
 .content_menu{
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -135,8 +135,8 @@ header{
 }
 
 .content_menu a{
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 80px;
     text-decoration: none;
     color: white;
     font-family: 'Etherea';
@@ -144,10 +144,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 25px;
 }
 
 #bouton_download{
-    width: 200px;
     background-image: url(illu/bouton-menu/download.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -185,7 +185,8 @@ header{
 .cattie{
     width: 7%;
     position: absolute; 
-    bottom: 445px;     
+    /* bottom: 445px;    */
+    bottom: 45%;   
     left: 150px;          
     transform: scaleX(1); 
     transition: transform 0.25s ease;
@@ -228,7 +229,7 @@ header{
 
 .container-arrow{
     background-color: #61438f00;
-    width: 200px;
+    width: 250px;
     height: 150px;
     z-index: 6;
     position: fixed;
@@ -312,7 +313,7 @@ header{
 
 .direction_text{
     /* background-color: #62438f; */
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Etherea';
     color: white;
     transform: rotate(-90deg);
@@ -342,9 +343,9 @@ header{
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
-    width: 800px;
-    height: 400px;
-    margin-top: -200px;
+    width: 50%;
+    height: 45%;
+    margin-top: -150px;
     padding: 25px;
     border-radius: 25px;
     animation: flotter 3s ease-in-out infinite;
@@ -356,15 +357,15 @@ header{
 }
 
 .texte-about{
-    width: 95%;
+    width: 90%;
     margin-top: 35px;
 }
 
 .content-about p{
     font-family: 'Texte';
-    margin-top: 15px;
+    margin-top: 25px;
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
@@ -378,12 +379,13 @@ header{
 #character{
     flex-direction: column;
 }
+
 #titre_character{
     font-family: 'Etherea';
     font-weight: normal;
     color:#ffffff;
     margin-top: -300px;
-    font-size: 70px;
+    font-size: 75px;
     text-shadow: #753975ff  1px 1px 2px;
     animation: flotter 3s ease-in-out infinite;
 }
@@ -392,7 +394,7 @@ header{
     width: 55%;
     z-index: 1;
     height: 35%;
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
 }
@@ -403,7 +405,7 @@ header{
     align-items: center;
     z-index: 10;
     width: 250px;
-    height: 400px;
+    height: 375px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -418,19 +420,19 @@ header{
 }
 
 .active-card-lavende{
-    transform: translate(-600px);
+    transform: translate(-700px);
     opacity: 1;
     z-index: 10;
 }
 
 .remove-card-lys{
-    transform:translate(-200px);
+    transform:translate(-300px);
     opacity:0;
     z-index: 0;
 }
 
 .remove-card-lavende{
-    transform:translate(-400px);
+    transform:translate(-700px);
     opacity:0;
     z-index: 0;
 }
@@ -479,7 +481,7 @@ header{
     position: absolute;
     z-index: 0;
     width: 500px;
-    height: 200px;
+    height: 250px;
     transition: 0.5s ease-in-out;
     display: flex;
     justify-content: center;
@@ -508,7 +510,7 @@ header{
     width: 75%;
     color: #ffffff;
     font-family: 'Texte';
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .character-texte-active{
@@ -526,16 +528,19 @@ header{
     font-family: 'Etherea';
     font-weight: normal;
     color:#ffffff;
-    margin-top: -200px;
-    font-size: 70px;
+    margin-top: -150px;
+    font-size: 75px;
     text-shadow: #753975ff  1px 1px 2px;
     animation: flotter 3s ease-in-out infinite;
 }
 .container_worlds{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 50px;
     margin-top: 50px;
+    align-items: center;
+    justify-items: center;
+    width: 50%;
 }
 
 .worlds_choice{
@@ -570,21 +575,12 @@ header{
     animation: flotter 2s ease-in-out infinite;
 }
 
-.worlds_behind {
-  transform: scale(0.8) translateY(50px);
-  opacity: 0.3;
-  z-index: 0;
-  filter: blur(2px);
-  transition: all 0.5s ease-in-out;
-}
-
 .texte-world{
     width: 100%;
     height: 100%;
     z-index: 0;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-    transform: translate(0px);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
@@ -598,22 +594,16 @@ header{
     width: 80%;
     font-family: 'Texte';
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .p-bottom{
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
-.texte-world-active-left{
+.texte-world-active{
     opacity: 1;
     z-index: 5;
-    transform: translate(425px);
-}
-.texte-world-active-right{
-    opacity: 1;
-    z-index: 5;
-    transform: translate(-425px);
 }
 
 #texte_foret{
@@ -640,10 +630,10 @@ header{
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
-    width: 800px;
-    height: 500px;
+    width: 45%;
+    height: 50%;
     margin-top: -200px;
-    margin-left: -500px;
+    margin-left: -600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -651,15 +641,15 @@ header{
 }
 .text-download{
     width: 80%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .text-download h3{
     font-family: 'Etherea';
     font-weight: normal;
     color: white;
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 25px;
+    margin-top: -50px;
     text-shadow: #d490e2 0px 0px 5px;
 }
 .text-download p{
@@ -675,7 +665,7 @@ header{
 }
 
 .available{
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     align-items: center;
     width: 80%;
@@ -684,8 +674,8 @@ header{
 .available p{
     font-family: 'Texte';
     color: white;
-    font-size: 14px;
-    margin-left: 15px;
+    font-size: 16px;
+    margin-left: 25px;
 }
 
 .available img{
@@ -696,21 +686,21 @@ header{
     display: flex;
     width: 80%;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .content-preorder a{
     text-decoration: none;
     color: white;
     font-family: 'Etherea';
-    font-size: 40px;
+    font-size: 35px;
 }
 
 #preorder{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 175px;
+    width: 200px;
     height: 50px;
     background-image: url(illu/bouton-menu/download.png);
     background-size: 100% 100%;
@@ -723,7 +713,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background-image: url(illu/bouton-menu/memory.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -736,4 +726,12 @@ header{
     align-self: flex-end;
     margin-top: -20px;
     margin-right: 50px;
+}
+
+/* Pour la protection d'un écran au délà d'un 1920 : */
+
+@media screen and (min-width: 1921px) {
+  body {
+    max-width: 1920px;
+  }
 }
