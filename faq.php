@@ -35,6 +35,23 @@
                     <p>For now, the game is only available on Windows and mainly on Steam.</p>
                 </div>
             </div>
+            <div class="faq-item">
+                <div class="faq-question"><h2>Is the game multiplayer ?</h2>
+                    <div class="faq-arrow"></div>
+                </div>   
+                <div class="faq-answer">
+                    <p>No, Etherea is a single-player game.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h2>Will there be a Etherea 2 ?</h2>
+                    <div class="faq-arrow"></div>
+                </div>   
+                <div class="faq-answer">
+                    <p>We won’t spoil anything, but yes, Etherea 2 is on its way. Expect new worlds to explore, deeper stories, and even more magic waiting to be discovered.</p>
+                </div>
+            </div>
+            <a href="contact.php" class="questions">Another questions ? <strong>Contact us !</strong></a>
         </div>
     </div>
 <script>
@@ -49,6 +66,13 @@
 
         }, {duration: 1000, fill: "forwards"})
     }
+    // la touche echap ramène à index.php 
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            window.location.href = "index.php";
+        }
+    });
+
     const items = document.querySelectorAll('.faq-item');
 
     items.forEach(item => {
