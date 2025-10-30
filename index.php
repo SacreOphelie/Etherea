@@ -27,8 +27,8 @@
         </div>
         <div class="content-menu">
             <a href="game.php" id="discover" class="bouton-menu"><h1>Discover</h1></a>
-            <a id="faq" class="bouton-menu"><h1>FAQ</h1></a>
-            <a id="contact" class="bouton-menu"><h1>Contact</h1></a>
+            <a href="faq.php" id="faq" class="bouton-menu"><h1>FAQ</h1></a>
+            <a href="contact.php" id="contact" class="bouton-menu"><h1>Contact</h1></a>
             <a id="quit" class="bouton-menu"><h1>Quit</h1></a>
         </div>
         <?php include("partials/footer.php") ?>
