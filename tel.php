@@ -97,10 +97,10 @@
 
         // Fermer le menu quand on clique sur un lien
         links.forEach(link => {
-        link.addEventListener('click', () => {
-            burger.classList.remove('active');
-            menu_burger.classList.remove('active_burger');
-        });
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                menu_burger.classList.remove('active_burger');
+            });
         });
     </script>
 </body>

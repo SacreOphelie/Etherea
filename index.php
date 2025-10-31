@@ -45,10 +45,8 @@
         
             }, {duration: 1000, fill: "forwards"})
         }
-        // modifier le lien quand on passe en dessous de 1500px vers le lien de la version mobile
-        const lien_tel = document.getElementById("discover");
-        if (window.innerWidth <= 1500) {
-            lien_tel.href = "tel.php";
+        if (window.innerWidth <= 500) {
+            move.style.display = "none";
         }
     </script>
 </body>

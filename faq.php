@@ -80,6 +80,9 @@
         item.classList.toggle('active');
       });
     });
+    if (window.innerWidth <= 500) {
+        move.style.display = "none";
+    }
 </script>
 </body>
 </html>

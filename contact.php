@@ -55,6 +55,9 @@
             window.location.href = "index.php";
         }
     });
+    if (window.innerWidth <= 500) {
+        move.style.display = "none";
+    }
 </script>
 </body>
 </html>

@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_index.css">
     <?php
         include("partials/favicon.php");
     ?>
     <title>Mentions Légales</title>
 </head>
+<header>
+    <a href="index.php" class="echap"><img src="illu/echap/echap.png" alt=""></a>
+</header>
 <body>
-    <div class="mentions slide">
-        <div id="marginmention"">
-
+    <div id="move"></div>
+    <div class="content-mention">
+        <div id="mention"">
             <h1>Terms & Conditions</h1>
-            <hr>
             <h2>1.Site</h2>
-            <p><a href="http://www.sacreophelie.be/">www.sacreophelie.be</a></p>
+            <p><a href="https://etherea-game.com.sacreophelie.be/">www.etherea-game.com.sacreophelie.be/</a></p>
             <h2>2.Editor</h2>
-            <p>Ophélie Sacré</p>
-            <p>E-mail: ophelie.Sacre@outlook.be </p>
+            <p>Etherea Game</p>
+            <p>E-mail: etherea.game@hotmail.com </p>
             <h2>3.Host</h2>
             <p>This site is hosted by o2switch.org, whose head office is located at CHE DES PARDIAUX 63000 CLERMONT FERRAND.</p>
             <h2>Access to the site</h2>
@@ -38,61 +40,78 @@
             <p>The publisher cannot be held responsible in case of failure, breakdown, difficulty, or interruption of operation, preventing access to the site or any of its functionalities. The equipment used to connect to the site is under your entire responsibility. You must take all appropriate measures to protect your equipment and your own data, particularly from Internet viruses. Additionally, you are solely responsible for the websites and data that you access.
         
             The publisher cannot be held responsible in case of legal proceedings against you:
-        <ul>
-            <li>due to the use of the site or any service accessible via the Internet;</li>
-            <li>due to your non-compliance with these terms and conditions.</li>
-        </ul>
-        
-        The publisher is not responsible for any damage caused to you, third parties, and/or your equipment due to your connection or use of the site, and you waive any action against them for this reason.
+            <ul>
+                <li>due to the use of the site or any service accessible via the Internet;</li>
+                <li>due to your non-compliance with these terms and conditions.</li>
+            </ul>
+            
+            <p>The publisher is not responsible for any damage caused to you, third parties, and/or your equipment due to your connection or use of the site, and you waive any action against them for this reason.</p>
+            <p> If the publisher becomes the subject of any friendly or judicial procedure due to your use of the site, they may seek indemnification from you for all damages, amounts, convictions, and expenses that may result from such proceedings.</p>
 
-    If the publisher becomes the subject of any friendly or judicial procedure due to your use of the site, they may seek indemnification from you for all damages, amounts, convictions, and expenses that may result from such proceedings.</p>
-        <h2>Hyperlinks</h2>
-        <p>Users are permitted by the publisher to establish hyperlinks to any part of the site. Any link must be removed at the simple request of the publisher. Any information accessible via a link to other websites is not published by the publisher. The publisher has no control over the content found at the linked destination.</p>
-        <h2>Collection and Protection of Data</h2>
-        <p>Your data is collected by Ophélie Sacré.
+            </p>
+            <h2>Hyperlinks</h2>
+            <p>Users are permitted by the publisher to establish hyperlinks to any part of the site. Any link must be removed at the simple request of the publisher. Any information accessible via a link to other websites is not published by the publisher. The publisher has no control over the content found at the linked destination.</p>
+            <h2>Collection and Protection of Data</h2>
+            <p>Your data is collected by Ophélie Sacré.
 
-    Personal data refers to any information relating to an identified or identifiable natural person (data subject); an identifiable person is one who can be identified, directly or indirectly, in particular by reference to a name, an identification number, or one or more specific factors specific to their physical, physiological, genetic, mental, economic, cultural, or social identity. Personal information that may be collected on the site is primarily used by the publisher for managing relationships with you, and where applicable, for processing your requests.
+        Personal data refers to any information relating to an identified or identifiable natural person (data subject); an identifiable person is one who can be identified, directly or indirectly, in particular by reference to a name, an identification number, or one or more specific factors specific to their physical, physiological, genetic, mental, economic, cultural, or social identity. Personal information that may be collected on the site is primarily used by the publisher for managing relationships with you, and where applicable, for processing your requests.
 
-    The personal data collected includes:
-        <ul>
-            <li>First and last name</li>
-            <li>Email address</li>
-        </ul>
-        </p>
-        <h2>Right of access, rectification, and delisting of your data</h2>
-        <p>Under applicable data protection regulations, users have the following rights:
+        The personal data collected includes:
+            <ul>
+                <li>A pseudo name</li>
+                <li>Email address</li>
+            </ul>
+            </p>
+            <h2>Right of access, rectification, and delisting of your data</h2>
+            <p>Under applicable data protection regulations, users have the following rights:
 
-    - **Right of access:** Users can exercise their right to access their personal data by writing to the following email address: info.epse.be. In this case, before implementing this right, the Platform may request proof of the user's identity to verify its accuracy.
+        - **Right of access:** Users can exercise their right to access their personal data by writing to the following email address: info.epse.be. In this case, before implementing this right, the Platform may request proof of the user's identity to verify its accuracy.
 
-    - **Right of rectification:** If the personal data held by the Platform is inaccurate, users can request the updating of their information.
+        - **Right of rectification:** If the personal data held by the Platform is inaccurate, users can request the updating of their information.
 
-    - **Right to erasure (right to be forgotten):** Users can request the deletion of their personal data in accordance with applicable data protection laws.
+        - **Right to erasure (right to be forgotten):** Users can request the deletion of their personal data in accordance with applicable data protection laws.
 
-    - **Right to restriction of processing:** Users can request the Platform to limit the processing of personal data in accordance with the scenarios provided by the GDPR.
+        - **Right to restriction of processing:** Users can request the Platform to limit the processing of personal data in accordance with the scenarios provided by the GDPR.
 
-    - **Right to object to processing:** Users can object to their data being processed in accordance with the scenarios provided by the GDPR.
+        - **Right to object to processing:** Users can object to their data being processed in accordance with the scenarios provided by the GDPR.
 
-    - **Right to data portability:** Users can request that the Platform provide them with the personal data they have provided to transmit it to another Platform.
+        - **Right to data portability:** Users can request that the Platform provide them with the personal data they have provided to transmit it to another Platform.
 
-    You can exercise these rights by contacting us at the following email address: ophelie.sacre@outlook.be.
+        You can exercise these rights by contacting us at the following email address: etherea.game@hotmail.com.
 
-    Any request must be accompanied by a copy of a valid signed identity document and specify the address at which the publisher can contact the requester. A response will be provided within one month of receiving the request. This period may be extended by two months if the complexity of the request and/or the number of requests so require.</p>
-        <h2>Use of Data</h2>
-        <p>The personal data collected from users aims to provide Platform services, improve them, and maintain a secure environment. The legal basis for processing is the execution of the contract between the user and the Platform. Specifically, the uses include:
+        Any request must be accompanied by a copy of a valid signed identity document and specify the address at which the publisher can contact the requester. A response will be provided within one month of receiving the request. This period may be extended by two months if the complexity of the request and/or the number of requests so require.</p>
+            <h2>Use of Data</h2>
+            <p>The personal data collected from users aims to provide Platform services, improve them, and maintain a secure environment. The legal basis for processing is the execution of the contract between the user and the Platform. Specifically, the uses include:
 
-    - Providing support for user inquiries or questions</p>
-        <h2>Data Retention Policy</h2>
-        <p>The Platform retains your data for the duration necessary to provide you with its services or assistance.
+        - Providing support for user inquiries or questions</p>
+            <h2>Data Retention Policy</h2>
+            <p>The Platform retains your data for the duration necessary to provide you with its services or assistance.
 
-    Additionally, to the extent reasonably necessary or required to fulfill legal or regulatory obligations, settle disputes, prevent fraud and abuse, or enforce our terms and conditions, we may retain some of your information even after you have closed your account or we no longer need to provide you with our services.</p>
-        <h2>Photographs and Product Representation</h2>
-        <p>
-        The product photographs accompanying their description are not contractual and do not bind the publisher.
-        </p>
-        <h2>Applicable Law</h2>
-        <p>Any dispute relating to the use of the website https://www.sacreophelie.be is subject to Belgian law. Except where prohibited by law, exclusive jurisdiction is granted to the competent courts of Belgium.</p>
+        Additionally, to the extent reasonably necessary or required to fulfill legal or regulatory obligations, settle disputes, prevent fraud and abuse, or enforce our terms and conditions, we may retain some of your information even after you have closed your account or we no longer need to provide you with our services.</p>
+            <h2>Photographs and Product Representation</h2>
+            <p>
+            The product photographs accompanying their description are not contractual and do not bind the publisher.
+            </p>
+            <h2>Applicable Law</h2>
+            <p>Any dispute relating to the use of the website https://www.sacreophelie.be is subject to Belgian law. Except where prohibited by law, exclusive jurisdiction is granted to the competent courts of Belgium.</p>
         </div>
 
     </div>
+    <script>
+        const move = document.getElementById("move");
+
+        document.body.onpointermove = event => {
+            const { clientX, clientY } = event;
+
+            move.animate({
+                left: `${clientX}px`,
+                top: `${clientY}px`
+        
+            }, {duration: 1000, fill: "forwards"})
+        }
+        if (window.innerWidth <= 500) {
+            move.style.display = "none";
+        }
+    </script>
 </body>
 </html>

@@ -127,6 +127,7 @@ p{
     font-size: 75px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    font-family: 'Etherea';
 }
 .bouton-menu:hover{
     margin-bottom: 25px;
@@ -190,13 +191,14 @@ p{
 
 .reseau{
     display: flex;
-    width: 12%;
+    width: 15%;
     justify-content: space-around;
+    align-items: center;
 }
 
 .reseau a{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 .reseau a img{
     width: 100%;
@@ -223,15 +225,15 @@ p{
 }
 
 .mention{
-    width: 12%;
+    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .mention a{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .mention a img{
@@ -472,6 +474,47 @@ header{
     background-color: rgb(134, 52, 182);
 }
 
+/* Terms */
+
+.content-mention{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #601781;
+}
+
+.content-mention #mention h1{
+    text-align: center;
+    color: white;
+    font-family: 'Texte';
+    font-size: 35px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.content-mention #mention h2{
+    color: white;
+    font-family: 'Texte';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.content-mention #mention p,
+.content-mention #mention ul,
+.content-mention #mention li,
+.content-mention #mention a{
+    color: white;
+    font-family: 'Texte';
+    font-size: 14px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+#mention{
+    width: 75%;
+}
+
 
 /* Responsive Menu */
 
@@ -508,12 +551,6 @@ header{
     .bouton-menu:hover h1{
         font-size: 85px;
     }
-    .reseau{
-        width: 15%;
-    }
-    .mention{
-        width: 15%;
-    }
     .content-faq h1{
         margin-top: 0;
     }
@@ -531,6 +568,23 @@ header{
     }
     .content-contact{
         width: 75%;
+    }
+    .reseau{
+        width: 15%;
+    }
+    .reseau a{
+        width:50px;
+        height: 50px;
+    }
+    .mention a{
+        width: 50px;
+        height: 50px;
+    }
+    .project p{
+        font-size: 14px;
+    }
+    .content-mail img{
+        width: 20px;
     }
 }
 @media screen and (max-width:1000px) {
@@ -552,19 +606,19 @@ header{
     }
     .footer-menu{
         flex-direction: column;
-        height: 300px;
+        height: 350px;
         justify-content: center;
     }
     .reseau{
-        width: 20%;
-        margin-top: 10px;
+        width: 25%;
+        margin-top: 25px;
+    }
+    .project{
+        margin-top: 25px;
     }
     .mention{
         width: 100%;
-        margin-top: 10px;
-    }
-    .content-mail img{
-        width: 25px;
+        margin-top: 25px;
     }
     .content-faq{
         width: 90%;
@@ -616,6 +670,9 @@ header{
     .content-contact h1{
         font-size: 150px;
     }
+    .content-faq h1{
+        margin-top: 100px;
+    }
 
 }
 @media screen and (max-width:500px) {
@@ -643,6 +700,9 @@ header{
         width: 40px;
         height: 40px;
     }
+    .project p{
+        font-size: 12px;
+    }
     .content-faq h1{
         font-size: 150px;
     }
@@ -651,6 +711,10 @@ header{
     }
     .contact-form button {
         width: 50% !important;
+    }
+    .content-contact h1{
+        margin-top: 100px;
+        margin-bottom: 25px;
     }
 
 }
@@ -677,10 +741,7 @@ header{
         width: 75%;
     }
     .content-mail{
-        width: 58%;
-    }
-    .content-mail img{
-        width: 20px;
+        justify-content: center;
     }
     .faq-question h2{
         font-size: 14px;
@@ -696,6 +757,18 @@ header{
     }
     .contact-form input, textarea, button{
         font-size: 14px;
+    }
+    .content-mention #mention h1{
+        font-size: 25px;
+    }
+    .content-mention h2{
+        font-size: 20px;
+    }
+    .content-mention #mention p,
+    .content-mention #mention ul,
+    .content-mention #mention li,
+    .content-mention #mention a{
+        font-size: 12px;
     }
 
 }
@@ -715,13 +788,23 @@ header{
         font-size: 20px;
     }
     .content-mail{
-        width: 80%;
+        width: 75%;
+
     }
     .footer-menu{
         margin-top: 0;
     }
     .content-contact{
         width: 85%;
+    }
+    .content-mention #mention h1{
+        font-size: 20px;
+    }
+    .content-mention h2{
+        font-size: 16px;
+    }
+    .content-mention p,ul,li,a{
+        font-size: 10px;
     }
 }
 @media screen and (max-width:240px) {

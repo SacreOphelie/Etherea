@@ -9,7 +9,7 @@
         </div>
         <div class="available"><img src="illu/icone/pc.png" alt=""><p>only available on PC</p></div>
         <div class="content-preorder">
-            <a href="https://store.steampowered.com" id="preorder">Pre-Order</a>
+            <a href="https://store.steampowered.com"  target="_blank" id="preorder">Pre-Order</a>
         </div>
         <a href="illu/memory/foret_cattie.png" id="memory" download="">Memory Photo</a>
     </div>
