@@ -9,7 +9,7 @@
         </div>
         <div class="available"><img src="illu/icone/pc.png" alt=""><p>only available on PC</p></div>
         <div class="content-preorder">
-            <a href="https://store.steampowered.com"  target="_blank" id="preorder">Pre-Order</a>
+            <a href="https://www.figma.com/proto/a0kGneEDOvtElQJcE8xVWS/Etherea-steam?page-id=0%3A1&node-id=1-2&p=f&viewport=45%2C187%2C0.25&t=nqIAA0uowYDkA1kq-1&scaling=scale-down-width&content-scaling=fixed"  target="_blank" id="preorder">Pre-Order</a>
         </div>
         <a href="illu/memory/foret_cattie.png" id="memory" download="">Memory Photo</a>
     </div>

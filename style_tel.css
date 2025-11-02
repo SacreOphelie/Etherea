@@ -274,9 +274,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
-.character-img video{
+#card-lys .character-img{
+    margin-top: 50px;
+}
+
+.character-img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1041,12 +1046,12 @@ header{
         height: 325px;
     }
     #lys{
-        width: 150px;
-        height: 250px;
+        width: 200px;
+        height: 325px;
     }
     #lavende{
-        width: 150px;
-        height: 250px;
+        width: 200px;
+        height: 325px;
     }
     .character-texte{
         width: 85%;

@@ -30,7 +30,7 @@
     <div class="content-page-character">
         <div id="lavende" class="card-character">
             <div class="character-img">
-                <video src="perso/Lavende_idl.webm" autoplay muted loop ></video>
+                <img src="perso/Lavende.png"></img>
             </div>
         </div>
        <div class="character-texte" id="texte-lavende">

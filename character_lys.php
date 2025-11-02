@@ -30,7 +30,7 @@
     <div class="content-page-character">
         <div id="lys" class="card-character">
             <div class="character-img">
-                <video src="perso/Lys_idl.webm" autoplay muted loop ></video>
+                <img src="perso/Lys.png"></img>
             </div>
         </div>
         <div class="character-texte" id="texte-lys">

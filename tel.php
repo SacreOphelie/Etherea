@@ -43,17 +43,17 @@
         <div class="content-character">            
             <a href="character_cattie.php" class="card-character" id="card-cattie">
                 <div class="character-img">
-                    <video src="perso/CatTie_idl.webm" autoplay muted loop ></video>
+                    <img src="perso/CatTie.png"></img>
                 </div>
             </a>
             <a href="character_lys.php" class="card-character" id="card-lys">
                 <div class="character-img">
-                    <video src="perso/Lys_idl.webm" autoplay muted loop></video>
+                    <img src="perso/Lys.png"></img>
                 </div>
             </a>
             <a href="character_lavende.php" class="card-character" id="card-lavende">
                 <div class="character-img">
-                    <video src="perso/Lavende_idl.webm" autoplay muted loop></video>
+                    <img src="perso/Lavende.png"></img>
                 </div>
             </a>
         </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="available"><img src="illu/icone/pc.png" alt=""><p>only available on PC</p></div>
             <div class="content-preorder">
-                <a href="https://store.steampowered.com" id="preorder">Pre-Order</a>
+                <a href="https://www.figma.com/proto/ZNxg3aPmyWZTEfHEO8eLCx/Sans-titre?page-id=0%3A1&node-id=1-6&viewport=87%2C275%2C2.49&t=gc5ObatwsfCika8G-1&scaling=scale-down-width&content-scaling=fixed" id="preorder">Pre-Order</a>
             </div>
         </div>
         <img src="illu/tel/tablette_download.png" alt="" id="image_bas_download">
